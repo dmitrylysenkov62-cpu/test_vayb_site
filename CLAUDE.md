@@ -13,3 +13,8 @@ This file provides guidance to Claude Code when working in this project.
 ## Key Conventions
 
 <!-- Add project conventions here -->
+
+## Поиск и исследование
+
+- **Анализ сайтов конкурентов и рынка** — всегда использовать Tavily (ключ в `.env` → `TAVILY_API_KEY`).
+- **Всё остальное** — встроенный поиск Claude.
