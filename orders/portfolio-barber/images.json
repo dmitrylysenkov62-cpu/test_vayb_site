@@ -1,0 +1,200 @@
+{
+  "world": "Высокий ключ",
+  "model": "seedream/5-pro (kie.ai), scripts/kie.mjs still",
+  "preamble": "Editorial still-life photography on a seamless warm off-white cyclorama. Large soft overhead source, huge white bounce, near-shadowless with one soft contact shadow. High key, gentle contrast, warm white and pale neutral grade. Medium-format sharpness, fine grain. Photographic realism, no CGI, no text, no logos, no watermark.",
+  "images": [
+    {
+      "id": "hero",
+      "raw": "raw/hero.png",
+      "ar": "16:9",
+      "ref": null,
+      "scene": "A hairdresser's workstation in a bright calm salon, seen straight on from chest height. On a plain warm off-white plaster wall hangs a large round frameless mirror with a warm LED halo glowing softly behind its edge, a gentle warm glow spreading on the wall around it; the mirror reflects only the bright opposite wall and soft window light, nobody in it. Under the mirror a floating shelf of pale oak with the tools of the trade neatly laid out: slim silver scissors, a black carbon comb, a compact black hair clipper, a round wooden brush, two amber glass spray bottles and one frosted white bottle without labels, a folded cream cotton towel, a small clear glass vase with a sprig of eucalyptus. Below the shelf plain wall and a light oak floor. Bright soft daylight from tall windows out of frame on the left, warm white grade, near-shadowless. The mirror and the shelf sit in the right half of the frame, the mirror centred vertically with plain empty wall above it in the upper quarter; the whole left half of the frame is plain empty pale wall and floor, large empty space for text. No chair, no people, no reflections of people, no posters, no text, no signs, no logos, no labels on the bottles.",
+      "outputs": [
+        {
+          "file": "assets/hero.webp",
+          "width": 1920,
+          "quality": 78
+        },
+        {
+          "file": "assets/og.jpg",
+          "width": 1200,
+          "height": 630,
+          "fit": "cover",
+          "position": "centre",
+          "format": "jpeg",
+          "quality": 80
+        }
+      ]
+    },
+    {
+      "id": "hero-m",
+      "raw": "raw/hero-m.png",
+      "ar": "3:4",
+      "ref": "raw/hero.png",
+      "scene": "Portrait framing of the same hairdresser's workstation as the reference image: the same large round frameless mirror with a warm LED halo on the plain warm off-white wall, the same pale oak floating shelf with the same tools laid out (silver scissors, black comb, black clipper, round wooden brush, amber and frosted bottles without labels, folded cream towel, glass vase with eucalyptus), light oak floor below. Camera straight on from chest height, the mirror and shelf centred in the frame, plain empty wall above the mirror in the upper quarter, floor in the lower fifth. Same bright soft daylight from the left, near-shadowless, warm white grade. No chair, no people, no reflections of people, no text, no signs, no logos, no labels.",
+      "outputs": [
+        {
+          "file": "assets/hero-m.webp",
+          "width": 1080,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "salon",
+      "raw": "raw/salon.png",
+      "ar": "16:9",
+      "ref": null,
+      "scene": "Wide interior of a small bright hair salon: three identical styling chairs with black leather seats in a row in front of three large round frameless mirrors on a plain warm off-white wall, a pale wooden counter under the mirrors, light oak floor. Seen straight on from the middle of the room, camera at chest height. Bright soft daylight from large windows out of frame, near-shadowless, warm white grade. The chairs and mirrors occupy the lower two thirds of the frame; the upper third is plain pale wall, empty space for text. No people, no reflections of people in the mirrors, no posters, no text, no signs, no logos, no plants.",
+      "outputs": [
+        {
+          "file": "assets/salon.webp",
+          "width": 1600,
+          "quality": 78
+        },
+        {
+          "file": "assets/salon-900.webp",
+          "width": 900,
+          "quality": 76
+        }
+      ]
+    },
+    {
+      "id": "master-1",
+      "raw": "raw/master-1.png",
+      "ar": "3:4",
+      "ref": null,
+      "scene": "Vertical portrait of a woman hairdresser about 32 years old at her workstation, standing, seen from the waist up, body turned three quarters, looking straight into the camera. Light brown hair gathered in a low bun, plain white cotton shirt and a dark grey canvas apron, slim silver scissors and a black comb held in one hand at chest level. Ordinary Russian person, Slavic appearance, everyday natural look, calm friendly expression with at most a slight closed-mouth smile, candid documentary portrait, not a stock photo, no wide toothy smile, no perfect white teeth, no glamour, no model looks, natural skin. Bright calm hair salon: plain warm off-white plaster wall, a large round frameless mirror with a soft warm LED halo and a pale oak shelf with tools softly out of focus behind, light oak floor, soft daylight from tall windows on the left, warm white grade. The face is in the upper third and clearly visible, sharp focus on the eyes. No text, no logos, no name badges, no jewelry, no watches.",
+      "outputs": [
+        {
+          "file": "assets/master-1.webp",
+          "width": 900,
+          "quality": 80
+        },
+        {
+          "file": "assets/master-1-480.webp",
+          "width": 480,
+          "quality": 76
+        }
+      ]
+    },
+    {
+      "id": "master-2",
+      "raw": "raw/master-2.png",
+      "ar": "3:4",
+      "ref": null,
+      "scene": "Vertical portrait of a woman hair colourist about 40 years old at work, seen from the waist up, body half turned to the side, head turned to the camera, looking into the camera. Dark blonde shoulder-length hair, plain black t-shirt and a dark apron, thin black gloves, holding a small black tint bowl and a flat tint brush with pale cream colour. Behind her, out of focus, a client sits in a salon chair with strands wrapped in aluminium foil, seen only from the back. Ordinary Russian person, Slavic appearance, everyday natural look, calm friendly expression with at most a slight closed-mouth smile, candid documentary portrait, not a stock photo, no wide toothy smile, no perfect white teeth, no glamour, no model looks, natural skin. Bright calm hair salon: plain warm off-white plaster wall, a large round frameless mirror with a soft warm LED halo and a pale oak shelf with tools softly out of focus behind, light oak floor, soft daylight from tall windows on the left, warm white grade. The colourist's face is in the upper third and clearly visible, sharp focus on the eyes. No text, no logos, no packaging, no name badges, no jewelry.",
+      "outputs": [
+        {
+          "file": "assets/master-2.webp",
+          "width": 900,
+          "quality": 80
+        },
+        {
+          "file": "assets/master-2-480.webp",
+          "width": 480,
+          "quality": 76
+        }
+      ]
+    },
+    {
+      "id": "master-3",
+      "raw": "raw/master-3.png",
+      "ar": "3:4",
+      "ref": null,
+      "scene": "Vertical portrait of a male barber about 35 years old at work, seen from the waist up, standing behind a seated client whose head is seen only from the back in the lower part of the frame. The barber has short dark hair and a short neat beard, plain dark grey shirt with rolled sleeves and a brown canvas apron, a compact black hair clipper in his hand near the client's temple, his head slightly turned, glancing into the camera. Ordinary Russian person, Slavic appearance, everyday natural look, calm friendly expression with at most a slight closed-mouth smile, candid documentary portrait, not a stock photo, no wide toothy smile, no perfect white teeth, no glamour, no model looks, natural skin. Bright calm hair salon: plain warm off-white plaster wall, a large round frameless mirror with a soft warm LED halo and a pale oak shelf with tools softly out of focus behind, light oak floor, soft daylight from tall windows on the left, warm white grade. The barber's face is in the upper third and clearly visible, sharp focus on the eyes. No text, no logos, no tattoos on the face or neck, no name badges.",
+      "outputs": [
+        {
+          "file": "assets/master-3.webp",
+          "width": 900,
+          "quality": 80
+        },
+        {
+          "file": "assets/master-3-480.webp",
+          "width": 480,
+          "quality": 76
+        }
+      ]
+    },
+    {
+      "id": "coffee",
+      "raw": "raw/coffee.png",
+      "ar": "16:9",
+      "ref": null,
+      "scene": "Still life on a pale wooden salon counter in front of a warm off-white wall: a white ceramic cup of black coffee on a small saucer, a folded soft cream cotton towel, a black comb and a pair of slim silver scissors lying next to it, a hint of steam over the cup, seen from slightly above at an angle. Soft bright daylight, near-shadowless, warm white grade. The objects sit in the right half and lower part of the frame; the left half is plain pale wall and empty counter, large empty space for text. No people, no hands, no text, no labels, no logos.",
+      "outputs": [
+        {
+          "file": "assets/coffee.webp",
+          "width": 1600,
+          "quality": 78
+        },
+        {
+          "file": "assets/coffee-900.webp",
+          "width": 900,
+          "quality": 76
+        }
+      ]
+    },
+    {
+      "id": "hero-b",
+      "variant": "Б",
+      "raw": "raw/hero-b.png",
+      "ar": "16:9",
+      "ref": "raw/salon.png",
+      "scene": "The same bright hair salon as the reference image: three identical styling chairs with black leather seats in a row in front of three large round frameless mirrors on a plain warm off-white wall, pale wooden counter, light oak floor. Wider and taller framing from the middle of the room, camera at chest height: the chairs and mirrors occupy only the lower half of the frame; the upper half is plain empty pale wall, large empty space for text. Bright soft daylight, near-shadowless, warm white grade. No people, no reflections of people, no posters, no text, no signs, no logos, no plants.",
+      "outputs": [
+        {
+          "file": "assets/hero-b.webp",
+          "width": 1920,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "hero-b-m",
+      "variant": "Б",
+      "raw": "raw/hero-b-m.png",
+      "ar": "9:16",
+      "ref": "raw/salon.png",
+      "scene": "Portrait framing of the same bright hair salon as the reference image: three styling chairs with black leather seats in front of round frameless mirrors on a plain warm off-white wall, light oak floor. The chairs and mirrors sit in the lower third of the frame; the upper two thirds are plain empty pale wall, empty space for text. Bright soft daylight, near-shadowless, warm white grade. No people, no reflections of people, no posters, no text, no signs, no logos.",
+      "outputs": [
+        {
+          "file": "assets/hero-b-m.webp",
+          "width": 1080,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "hero-v",
+      "variant": "В",
+      "raw": "raw/hero-v.png",
+      "ar": "16:9",
+      "ref": "raw/hero.png",
+      "scene": "The same hairdresser's workstation as the reference image (round frameless mirror with a warm halo on a plain warm off-white wall, pale oak shelf with scissors, comb, clipper, brush, bottles, towel and eucalyptus), now seen from the side at a 45-degree angle from chest height, a black leather styling chair seen from behind in front of the mirror, low in the frame. The chair, mirror and shelf stand in the right half of the frame; the left half is plain empty pale wall and floor, large empty space for text. Bright soft daylight from a window out of frame on the left, near-shadowless, warm white grade. No people, no reflection of people in the mirror, no text, no logos, no labels.",
+      "outputs": [
+        {
+          "file": "assets/hero-v.webp",
+          "width": 1920,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "hero-v-m",
+      "variant": "В",
+      "raw": "raw/hero-v-m.png",
+      "ar": "9:16",
+      "ref": "raw/hero.png",
+      "scene": "Portrait framing of the same hairdresser's workstation as the reference image (round mirror with a warm halo, pale oak shelf with tools) seen from the side at a 45-degree angle, a black leather styling chair from behind in front of it. The chair, mirror and shelf sit in the lower half of the frame; the upper half is plain empty pale wall, empty space for text. Bright soft daylight, near-shadowless, warm white grade. No people, no reflection of people, no text, no logos, no labels.",
+      "outputs": [
+        {
+          "file": "assets/hero-v-m.webp",
+          "width": 1080,
+          "quality": 78
+        }
+      ]
+    }
+  ],
+  "keep": []
+}

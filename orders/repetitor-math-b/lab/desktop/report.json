@@ -1,0 +1,117 @@
+{
+  "url": "http://localhost:4600/repetitor-math-b/",
+  "width": 1440,
+  "height": 900,
+  "reduced": false,
+  "acts": [
+    {
+      "i": 0,
+      "type": "pin",
+      "h": 1710
+    },
+    {
+      "i": 1,
+      "type": "flow",
+      "h": 893
+    },
+    {
+      "i": 2,
+      "type": "pin",
+      "h": 2250
+    },
+    {
+      "i": 3,
+      "type": "pan",
+      "h": 1980
+    },
+    {
+      "i": 4,
+      "type": "flow",
+      "h": 1137
+    },
+    {
+      "i": 5,
+      "type": "flow",
+      "h": 885
+    },
+    {
+      "i": 6,
+      "type": "flow",
+      "h": 629
+    },
+    {
+      "i": 7,
+      "type": "pin",
+      "h": 1260
+    }
+  ],
+  "horizontalOverflow": {
+    "sw": 1440,
+    "iw": 1440,
+    "wide": [
+      "img +43px"
+    ]
+  },
+  "cuesNeverPeaked": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "shots": [
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\00-top.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\01-act0-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\02-act0-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\03-act0-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\04-act0-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\05-act0-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\06-act0-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\07-act0-pin-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\08-act1-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\09-act1-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\10-act1-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\11-act1-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\12-act1-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\13-act1-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\14-act1-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\15-act2-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\16-act2-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\17-act2-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\18-act2-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\19-act2-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\20-act2-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\21-act2-pin-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\22-act3-pan-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\23-act3-pan-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\24-act3-pan-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\25-act3-pan-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\26-act3-pan-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\27-act3-pan-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\28-act3-pan-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\29-act4-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\30-act4-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\31-act4-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\32-act4-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\33-act4-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\34-act4-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\35-act4-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\36-act5-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\37-act5-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\38-act5-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\39-act5-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\40-act5-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\41-act5-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\42-act5-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\43-act6-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\44-act6-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\45-act6-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\46-act6-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\47-act6-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\48-act6-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\49-act6-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\50-act7-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\51-act7-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\52-act7-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\53-act7-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\54-act7-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\55-act7-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math-b\\lab\\desktop\\56-act7-pin-p1.00.png"
+  ]
+}

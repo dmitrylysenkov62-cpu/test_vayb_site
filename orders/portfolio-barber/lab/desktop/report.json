@@ -1,0 +1,87 @@
+{
+  "url": "http://localhost:4600/portfolio-barber/",
+  "width": 1440,
+  "height": 900,
+  "reduced": false,
+  "acts": [
+    {
+      "i": 0,
+      "type": "pin",
+      "h": 2700
+    },
+    {
+      "i": 1,
+      "type": "flow",
+      "h": 1151
+    },
+    {
+      "i": 2,
+      "type": "pin",
+      "h": 2160
+    },
+    {
+      "i": 3,
+      "type": "flow",
+      "h": 1725
+    },
+    {
+      "i": 4,
+      "type": "flow",
+      "h": 1327
+    },
+    {
+      "i": 5,
+      "type": "pin",
+      "h": 1170
+    }
+  ],
+  "horizontalOverflow": null,
+  "cuesNeverPeaked": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "shots": [
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\00-top.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\01-act0-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\02-act0-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\03-act0-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\04-act0-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\05-act0-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\06-act0-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\07-act0-pin-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\08-act1-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\09-act1-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\10-act1-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\11-act1-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\12-act1-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\13-act1-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\14-act1-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\15-act2-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\16-act2-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\17-act2-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\18-act2-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\19-act2-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\20-act2-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\21-act2-pin-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\22-act3-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\23-act3-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\24-act3-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\25-act3-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\26-act3-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\27-act3-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\28-act3-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\29-act4-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\30-act4-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\31-act4-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\32-act4-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\33-act4-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\34-act4-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\35-act4-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\36-act5-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\37-act5-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\38-act5-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\39-act5-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\40-act5-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\41-act5-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-barber\\lab\\desktop\\42-act5-pin-p1.00.png"
+  ]
+}

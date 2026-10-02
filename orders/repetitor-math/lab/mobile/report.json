@@ -1,0 +1,121 @@
+{
+  "url": "http://localhost:4600/repetitor-math/",
+  "width": 390,
+  "height": 844,
+  "reduced": false,
+  "acts": [
+    {
+      "i": 0,
+      "type": "pin",
+      "h": 1350
+    },
+    {
+      "i": 1,
+      "type": "flow",
+      "h": 1167
+    },
+    {
+      "i": 2,
+      "type": "pin",
+      "h": 1941
+    },
+    {
+      "i": 3,
+      "type": "pan",
+      "h": 445
+    },
+    {
+      "i": 4,
+      "type": "flow",
+      "h": 2187
+    },
+    {
+      "i": 5,
+      "type": "flow",
+      "h": 1137
+    },
+    {
+      "i": 6,
+      "type": "flow",
+      "h": 628
+    },
+    {
+      "i": 7,
+      "type": "pin",
+      "h": 1097
+    }
+  ],
+  "horizontalOverflow": {
+    "sw": 390,
+    "iw": 390,
+    "wide": [
+      "div.les__rail +1477px",
+      "div.card +239px",
+      "figure +239px",
+      "img +239px",
+      "figcaption +239px"
+    ]
+  },
+  "cuesNeverPeaked": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "shots": [
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\00-top.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\01-act0-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\02-act0-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\03-act0-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\04-act0-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\05-act0-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\06-act0-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\07-act0-pin-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\08-act1-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\09-act1-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\10-act1-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\11-act1-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\12-act1-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\13-act1-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\14-act1-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\15-act2-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\16-act2-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\17-act2-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\18-act2-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\19-act2-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\20-act2-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\21-act2-pin-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\22-act3-pan-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\23-act3-pan-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\24-act3-pan-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\25-act3-pan-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\26-act3-pan-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\27-act3-pan-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\28-act3-pan-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\29-act4-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\30-act4-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\31-act4-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\32-act4-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\33-act4-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\34-act4-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\35-act4-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\36-act5-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\37-act5-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\38-act5-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\39-act5-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\40-act5-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\41-act5-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\42-act5-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\43-act6-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\44-act6-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\45-act6-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\46-act6-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\47-act6-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\48-act6-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\49-act6-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\50-act7-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\51-act7-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\52-act7-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\53-act7-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\54-act7-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\55-act7-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\repetitor-math\\lab\\mobile\\56-act7-pin-p1.00.png"
+  ]
+}

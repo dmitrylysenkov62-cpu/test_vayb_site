@@ -1,0 +1,106 @@
+{
+  "url": "http://localhost:4600/portfolio-cake/",
+  "width": 390,
+  "height": 844,
+  "reduced": false,
+  "acts": [
+    {
+      "i": 0,
+      "type": "pin",
+      "h": 1350
+    },
+    {
+      "i": 1,
+      "type": "flow",
+      "h": 1012
+    },
+    {
+      "i": 2,
+      "type": "pin",
+      "h": 1857
+    },
+    {
+      "i": 3,
+      "type": "flow",
+      "h": 1352
+    },
+    {
+      "i": 4,
+      "type": "pin",
+      "h": 1519
+    },
+    {
+      "i": 5,
+      "type": "flow",
+      "h": 1136
+    },
+    {
+      "i": 6,
+      "type": "flow",
+      "h": 908
+    }
+  ],
+  "horizontalOverflow": {
+    "sw": 390,
+    "iw": 390,
+    "wide": [
+      "img +23px",
+      "img +23px"
+    ]
+  },
+  "cuesNeverPeaked": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "shots": [
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\00-top.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\01-act0-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\02-act0-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\03-act0-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\04-act0-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\05-act0-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\06-act0-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\07-act0-pin-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\08-act1-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\09-act1-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\10-act1-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\11-act1-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\12-act1-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\13-act1-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\14-act1-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\15-act2-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\16-act2-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\17-act2-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\18-act2-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\19-act2-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\20-act2-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\21-act2-pin-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\22-act3-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\23-act3-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\24-act3-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\25-act3-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\26-act3-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\27-act3-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\28-act3-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\29-act4-pin-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\30-act4-pin-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\31-act4-pin-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\32-act4-pin-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\33-act4-pin-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\34-act4-pin-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\35-act4-pin-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\36-act5-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\37-act5-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\38-act5-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\39-act5-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\40-act5-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\41-act5-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\42-act5-flow-p1.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\43-act6-flow-p0.00.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\44-act6-flow-p0.17.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\45-act6-flow-p0.33.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\46-act6-flow-p0.50.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\47-act6-flow-p0.67.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\48-act6-flow-p0.83.png",
+    "D:\\vayb_site\\orders\\portfolio-cake\\lab\\mobile\\49-act6-flow-p1.00.png"
+  ]
+}
