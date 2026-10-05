@@ -25,6 +25,7 @@
             --max-w:          1200px;
         }
 
+        html, body { overflow-x: hidden; max-width: 100%; }
         body {
             font-family: 'Manrope', system-ui, sans-serif;
             background: var(--surface-page);
@@ -249,7 +250,7 @@
         .counter-val { font-size: 1.2rem; font-weight: 800; }
 
         .calc-divider { border: none; border-top: 1px solid var(--surface-border); margin: 8px 0; }
-        .calc-total-label { font-size: 0.8rem; color: var(--ink-muted); margin-bottom: 2px; }
+        .calc-total-label { font-size: 0.8rem; color: var(--accent); margin-bottom: 2px; }
         .calc-total-num   { font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-bottom: 1px; }
         .calc-total-fine  { font-size: 0.75rem; color: var(--ink-muted); margin-bottom: 8px; }
         .calc-preview-label { display: none; }
@@ -429,6 +430,12 @@
             opacity: 0; transform: translateY(10px);
             transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
+        .tl-item--featured .tl-dot {
+            background: var(--accent); color: #091120;
+            box-shadow: 0 0 0 5px rgba(34,211,238,0.2);
+            border: 2.5px solid #091120;
+        }
+        .tl-item--featured .tl-desc { font-weight: 700; color: rgba(9,17,32,0.9); }
         .tl-item.step-in .tl-dot  { opacity:1; transform:scale(1); }
         .tl-item.step-in .tl-name { opacity:1; transform:none; transition-delay:0.07s; }
         .tl-item.step-in .tl-desc { opacity:1; transform:none; transition-delay:0.13s; }
@@ -680,7 +687,7 @@
     <div class="hero-left">
         <p class="hero-eyebrow">Натяжные потолки · {{город}}</p>
         <h1 class="hero-title">Цена вашего потолка<br>за 30 секунд</h1>
-        <p class="hero-sub">Рассчитайте стоимость прямо сейчас — точная смета на замере за 2 минуты. Приедем в любой день, бесплатно.</p>
+        <p class="hero-sub">Прикиньте цену прямо сейчас в калькуляторе.<br><span style="color:var(--accent);font-weight:600;">Точную смету замерщик оформит у вас дома — за&nbsp;2&nbsp;минуты, сразу в&nbsp;PDF.</span></p>
         <p class="hero-price">от 500 р/м² <small>с установкой</small></p>
         <a href="tel:+79000000000" class="hero-phone hero-phone-mobile">+7 (900) 000-00-00</a>
         <p class="hero-phone-note hero-phone-note-mobile">с 9:00 до 20:00, без выходных</p>
@@ -803,11 +810,11 @@
                         <p class="tl-desc">Оставьте номер — перезвоним за 15 минут и согласуем удобное время замера.</p>
                     </div>
                 </div>
-                <div class="tl-item">
+                <div class="tl-item tl-item--featured">
                     <div class="tl-dot">02</div>
                     <div class="tl-body">
                         <p class="tl-name">Замер</p>
-                        <p class="tl-desc">Приедем в назначенное время, замерим помещения и подготовим точную смету.</p>
+                        <p class="tl-desc">Приедем во время, замерим - <u>через 2 минуты у вас точная смета в PDF</u>.</p>
                     </div>
                 </div>
                 <div class="tl-item">
