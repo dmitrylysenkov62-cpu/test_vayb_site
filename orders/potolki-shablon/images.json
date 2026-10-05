@@ -1,0 +1,148 @@
+{
+  "world": "Натяжные потолки · интерьерная документальная фотосъёмка",
+  "model": "seedream/5-pro (kie.ai), scripts/kie.mjs",
+  "preamble": "Interior documentary photography of a finished stretch ceiling installation in an ordinary Russian apartment or house. Shot with a wide or standard lens at eye level or slightly above. Natural daylight from windows, supplemented by built-in ceiling lighting where present. True-to-life colours, real interior finishes, no colour grading or heavy post-processing. Photographic realism, no CGI, no text, no signs, no watermarks, no people.",
+  "images": [
+    {
+      "id": "type-matte",
+      "raw": "raw/type-matte.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "A bright, clean living room with a freshly installed white matte stretch ceiling filling the entire ceiling plane. The matte surface absorbs light evenly with no reflections, giving a soft velvety look. White walls, light laminate or parquet floor, simple modern furniture: a sofa and a low coffee table. A recessed spotlights are barely visible flush with the ceiling surface. Wide shot, camera at eye level, ceiling clearly prominent in the upper half of the frame. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/type-matte.webp",
+          "width": 820,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "type-satin",
+      "raw": "raw/type-satin.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "A bedroom with a satin stretch ceiling: a smooth pale-beige or warm-white surface with a soft, subtle silky sheen — not reflective like a mirror but clearly different from pure matte; the satin finish catches the light gently from a ceiling chandelier in the centre. Light walls, parquet floor, double bed with plain bedding. The ceiling surface is the main subject, clearly showing the satin texture and gentle light play. Wide shot, camera at eye level. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/type-satin.webp",
+          "width": 820,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "type-gloss",
+      "raw": "raw/type-gloss.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "A modern living room or dining area with a high-gloss white stretch ceiling: the surface is a perfect mirror, clearly reflecting the room below — a sofa, a chandelier, the windows — creating a dramatic doubling effect. The glossy ceiling fills the upper half of the frame, and the reflection is sharp and complete. Neutral white and light-grey interior, the glossy ceiling is the clear visual focus. Wide shot from eye level or slightly below looking up at an angle. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/type-gloss.webp",
+          "width": 820,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "type-multi",
+      "raw": "raw/type-multi.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "A spacious living room with a two-level stretch ceiling: the central lower tier is a glossy white rectangle framed by a wider matte white upper tier; a strip of warm LED backlighting runs along the hidden ledge between the two levels, casting a soft warm glow upward. Simple modern interior, neutral walls, the two-level ceiling is the dominant visual element. Wide shot from eye level, the full ceiling visible, LED glow clearly visible. Evening or dim interior light so the LED strip reads strongly. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/type-multi.webp",
+          "width": 820,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "portfolio-1",
+      "raw": "raw/portfolio-1.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "Completed stretch ceiling installation in a large Russian living room: white glossy ceiling with a striking mirror reflection of the pendant chandelier and the room below. Neutral light-grey walls, light engineered wood floor, simple modern sofa visible at the bottom of the frame. The ceiling fills the upper half; the reflection in the gloss surface clearly shows the inverted room. Documentary photo taken right after installation to record the finished job. Wide shot, camera at head height. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/portfolio-1.webp",
+          "width": 900,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "portfolio-2",
+      "raw": "raw/portfolio-2.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "Completed white matte stretch ceiling in a master bedroom of an ordinary Russian apartment: clean and smooth white surface, flush recessed spots, a ceiling chandelier in the centre. Beige walls, double bed with plain white bedding partially visible at the bottom, parquet floor. Soft daylight through a window. Documentary photo to record the finished job. Wide shot from the doorway or corner, ceiling clearly prominent. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/portfolio-2.webp",
+          "width": 900,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "portfolio-3",
+      "raw": "raw/portfolio-3.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "Two-level stretch ceiling in a Russian living room: the lower central tier is a glossy rectangle with a warm LED backlight strip glowing between the two levels, the outer upper tier is matte white. Evening lighting so the LED warm-orange glow is the main source of atmosphere. Modern interior, dark flooring, a TV on the wall. Documentary photo taken after installation. Wide shot, the full ceiling prominently visible. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/portfolio-3.webp",
+          "width": 900,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "portfolio-4",
+      "raw": "raw/portfolio-4.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "Finished white satin stretch ceiling in a Russian kitchen: smooth pale-white surface with a subtle silky sheen, flush LED panel light, kitchen cabinets and a countertop visible below. Bright daylight, clean tidy kitchen. Documentary photo. Wide angle, camera at head height looking slightly up. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/portfolio-4.webp",
+          "width": 900,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "portfolio-5",
+      "raw": "raw/portfolio-5.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "Newly installed two-level stretch ceiling in a hallway or corridor of a Russian apartment: narrow space, the ceiling has a central satin lower tier framed by a matte upper border with a recessed LED strip casting warm light sideways. The corridor stretches into the frame showing perspective depth. Light laminate floor, neutral painted walls. Documentary photo. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/portfolio-5.webp",
+          "width": 900,
+          "quality": 78
+        }
+      ]
+    },
+    {
+      "id": "portfolio-6",
+      "raw": "raw/portfolio-6.png",
+      "ar": "4:3",
+      "ref": null,
+      "scene": "Completed white matte stretch ceiling in a child's room: clean smooth white surface, a simple ceiling light fixture, pale coloured walls (soft blue or light yellow), children's bed or desk partially visible at the bottom. Daylight. Documentary photo taken right after finishing the installation. Wide shot from the doorway. No people, no text.",
+      "outputs": [
+        {
+          "file": "assets/portfolio-6.webp",
+          "width": 900,
+          "quality": 78
+        }
+      ]
+    }
+  ],
+  "keep": []
+}

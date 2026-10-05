@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Натяжные потолки в {{город}} — от 500 р/м²</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --surface-page:   #111111;
+            --surface-raised: #1C1C1C;
+            --surface-input:  #222222;
+            --surface-border: #2E2E2E;
+            --accent:         #DC9D45;
+            --accent-dim:     #B47C2A;
+            --ink:            #FFFFFF;
+            --ink-soft:       #EAEAEA;
+            --ink-muted:      #9C9C9C;
+            --surface-alt:    #2A2A2A;
+            --radius-sm:      6px;
+            --radius-md:      8px;
+            --radius-lg:      10px;
+            --max-w:          1200px;
+        }
+
+        body {
+            font-family: 'Manrope', system-ui, sans-serif;
+            background: var(--surface-page);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ── TYPOGRAPHY ────────────────────────────────── */
+        h1 { font-size: clamp(2.25rem, 4.5vw, 3.75rem); font-weight: 800; line-height: 1.1; }
+        h2 { font-size: clamp(1.625rem, 3vw, 2.25rem);  font-weight: 800; line-height: 1.2; }
+        h3 { font-size: 1.125rem; font-weight: 700; }
+
+        /* ── LAYOUT ────────────────────────────────────── */
+        .container  { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+        .section    { padding: 80px 0; }
+
+        /* ── HEADER ────────────────────────────────────── */
+        .header {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(26,26,26,0.96);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--surface-border);
+            padding: 14px 0;
+        }
+        .header-inner {
+            display: flex; align-items: center;
+            justify-content: space-between; gap: 16px;
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--ink); text-decoration: none; flex-shrink: 0; }
+        .logo em { color: var(--accent); font-style: normal; }
+        .header-nav {
+            display: flex; align-items: center; gap: 26px;
+            flex: 1; justify-content: center;
+        }
+        .nav-link {
+            color: rgba(255,255,255,0.63);
+            text-decoration: none;
+            font-size: 0.83rem; font-weight: 500;
+            transition: color 0.15s;
+            white-space: nowrap;
+        }
+        .nav-link:hover { color: var(--ink); }
+        .header-right { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+        .header-phone { font-weight: 600; color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+        .header-cta {
+            position: relative; overflow: hidden;
+            background: var(--accent); color: #1A1A1A;
+            font-weight: 700; padding: 9px 18px;
+            border-radius: var(--radius-sm); text-decoration: none;
+            font-size: 0.875rem; white-space: nowrap;
+        }
+
+        /* ── HERO ZONE — wrapper for layering ─────────── */
+        /* Layer order: photo (0) → ticker (2) → calculator (3) */
+        .hero-zone { position: relative; }
+
+        /* ── HERO ──────────────────────────────────────── */
+        .hero {
+            position: relative;
+            min-height: calc(76vh - 80px);
+            overflow: hidden;
+            display: flex;
+            align-items: stretch;
+        }
+        .hero-bg {
+            position: absolute;
+            top: -20%; right: 0; bottom: -20%; left: 0;
+            z-index: 0;
+            background-image: url('../../hero.jpg');
+            background-size: cover;
+            background-position: center;
+            will-change: transform;
+        }
+        .hero-left {
+            position: relative; z-index: 2;
+            width: 42%;
+            background: #0D0D0D;
+            padding: 56px 52px 56px 60px;
+            display: flex; flex-direction: column; justify-content: center;
+            animation: hero-left-in 1.3s cubic-bezier(0.16,1,0.3,1) 0.3s both;
+        }
+        /* Calculator floats outside .hero — anchored to bottom of hero-zone,
+           appears above both the photo and the ticker strip */
+        .hero-right {
+            position: absolute; right: 0; bottom: -44px; top: auto;
+            width: 380px; z-index: 3;
+            background: #0D0D0D;
+            padding: 22px 26px;
+            display: flex; flex-direction: column;
+            animation: hero-right-in 1.3s cubic-bezier(0.16,1,0.3,1) 0.6s both;
+        }
+        @keyframes hero-left-in {
+            from { transform: translateX(-100%); }
+            to   { transform: translateX(0); }
+        }
+        @keyframes hero-right-in {
+            from { transform: translateX(100%); }
+            to   { transform: translateX(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-left, .hero-right { animation: none; }
+        }
+        .hero-eyebrow {
+            font-size: 0.875rem; font-weight: 500; letter-spacing: .06em;
+            color: rgba(255,255,255,0.44); margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+        .hero-title { margin-bottom: 18px; }
+        .hero-sub {
+            font-size: 0.95rem; color: rgba(255,255,255,0.67);
+            font-weight: 400; margin-bottom: 22px; line-height: 1.65;
+        }
+        .hero-price {
+            font-size: 1.1rem; font-weight: 800;
+            color: var(--accent); margin-bottom: 20px;
+        }
+        .hero-price small {
+            color: rgba(255,255,255,0.46); font-weight: 400;
+            font-size: 0.8rem; margin-left: 8px;
+        }
+        .chips { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 26px; }
+        .chip {
+            display: flex; align-items: center; gap: 6px;
+            padding: 5px 11px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 2px;
+            font-size: 0.875rem; font-weight: 500;
+            color: rgba(255,255,255,0.67);
+            background: rgba(255,255,255,0.04);
+        }
+        .chip-dot {
+            width: 4px; height: 4px; border-radius: 50%;
+            background: var(--accent); flex-shrink: 0;
+        }
+        .hero-phone { font-size: 1.5rem; font-weight: 800; color: var(--ink); text-decoration: none; display: block; }
+        .hero-phone-note { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin-top: 4px; }
+        .hero-phone-mobile { display: none; }
+        .hero-phone-note-mobile { display: none; }
+
+        /* ── PHONE OVERLAY (on photo, top-right column, above calculator) ── */
+        .hero-photo-contact {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 380px;
+            padding: 16px 26px;
+            z-index: 2;
+        }
+        .hero-overlay-phone {
+            display: block;
+            font-size: 1.3rem; font-weight: 800;
+            color: #111111;
+            text-shadow: 0 0 16px rgba(255,255,255,1), 0 1px 6px rgba(255,255,255,1);
+            text-decoration: none;
+            margin-bottom: 2px;
+            transition: color 0.12s;
+        }
+        .hero-overlay-phone:hover { color: var(--accent); }
+        .hero-overlay-note {
+            font-size: 0.85rem; font-weight: 600;
+            color: #111111;
+        }
+
+        /* ── CALCULATOR ────────────────────────────────── */
+        .calc-card {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            position: static;
+        }
+        .calc-title  { font-size: 0.95rem; font-weight: 800; margin-bottom: 2px; }
+        .calc-hint   { font-size: 0.825rem; color: var(--ink-muted); margin-bottom: 10px; }
+        .calc-row    { margin-bottom: 9px; }
+        .calc-row-label {
+            display: flex; justify-content: space-between;
+            align-items: baseline; margin-bottom: 7px;
+            font-size: 0.875rem; font-weight: 600; color: var(--ink-muted);
+        }
+        .calc-row-label strong { font-size: 1rem; font-weight: 800; color: var(--ink); }
+
+        input[type=range] {
+            -webkit-appearance: none; width: 100%;
+            height: 4px; background: var(--surface-border);
+            border-radius: 2px; outline: none; cursor: pointer;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px; height: 20px; border-radius: 50%;
+            background: var(--accent); cursor: pointer;
+            border: 3px solid var(--surface-raised);
+        }
+        input[type=range]::-moz-range-thumb {
+            width: 20px; height: 20px; border-radius: 50%;
+            background: var(--accent); cursor: pointer; border: none;
+        }
+
+        .mat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+        .mat-btn {
+            padding: 7px 4px; border-radius: var(--radius-sm);
+            border: 1px solid var(--surface-border);
+            background: var(--surface-input);
+            color: var(--ink-muted); font-size: 0.875rem; font-weight: 600;
+            font-family: inherit; cursor: pointer; transition: all 0.12s;
+            text-align: center; line-height: 1.35;
+        }
+        .mat-btn small { display: block; font-weight: 400; opacity: .65; font-size: 0.78rem; }
+        .mat-btn:hover { border-color: var(--accent); color: var(--ink); }
+        .mat-btn.active { background: var(--accent); border-color: var(--accent); color: #1A1A1A; }
+        .mat-btn.active small { opacity: .55; }
+
+        .counters-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .counter-box { background: var(--surface-input); border-radius: var(--radius-md); padding: 9px; }
+        .counter-name { font-size: 0.8rem; color: var(--ink-muted); font-weight: 500; margin-bottom: 5px; }
+        .counter-controls { display: flex; align-items: center; justify-content: space-between; }
+        .counter-btn {
+            width: 26px; height: 26px; border-radius: 6px;
+            border: 1px solid var(--surface-border);
+            background: var(--surface-raised); color: var(--ink);
+            font-size: 1rem; font-family: inherit; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.1s, color 0.1s; line-height: 1;
+        }
+        .counter-btn:hover { background: var(--accent); color: #1A1A1A; border-color: var(--accent); }
+        .counter-val { font-size: 1.2rem; font-weight: 800; }
+
+        .calc-divider { border: none; border-top: 1px solid var(--surface-border); margin: 8px 0; }
+        .calc-total-label { font-size: 0.8rem; color: var(--ink-muted); margin-bottom: 2px; }
+        .calc-total-num   { font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-bottom: 1px; }
+        .calc-total-fine  { font-size: 0.75rem; color: var(--ink-muted); margin-bottom: 8px; }
+        .calc-preview-label { display: none; }
+        .calc-preview {
+            background: rgba(200,148,26,0.1);
+            border-radius: var(--radius-sm);
+            border: 1px solid rgba(200,148,26,0.35);
+            border-left: 3px solid var(--accent);
+            padding: 8px 10px;
+            font-size: 0.85rem;
+            color: var(--ink-soft);
+            line-height: 1.55;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .calc-cta {
+            position: relative; overflow: hidden;
+            width: 100%; padding: 11px;
+            background: var(--accent); color: #1A1A1A;
+            font-family: inherit; font-weight: 800;
+            font-size: 0.875rem; border: none;
+            border-radius: var(--radius-md); cursor: pointer;
+            transition: background 0.12s;
+        }
+        .calc-cta:hover { background: var(--accent-dim); }
+
+        /* ── TICKER ────────────────────────────────────── */
+        .ticker { background: var(--accent); padding: 11px 0; overflow: hidden; position: relative; z-index: 2; }
+        .ticker-track {
+            display: flex; white-space: nowrap;
+            animation: ticker-scroll 32s linear infinite;
+        }
+        .ticker-item {
+            display: inline-flex; align-items: center; gap: 0;
+            padding: 0 0 0 40px; font-size: 0.825rem;
+            font-weight: 700; color: #1A1A1A;
+        }
+        .ticker-sep {
+            display: inline-block; width: 4px; height: 4px;
+            border-radius: 50%; background: rgba(26,26,26,.35);
+            margin-left: 40px;
+        }
+        @keyframes ticker-scroll {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .ticker-track { animation: none; }
+        }
+
+        /* ── SECTION HEADER ────────────────────────────── */
+        .sec-head { margin-bottom: 44px; }
+        .sec-head h2 { margin-bottom: 8px; }
+        .sec-head p  { color: var(--ink-muted); font-size: 0.975rem; max-width: 540px; }
+
+        /* ── TYPES ─────────────────────────────────────── */
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .type-card {
+            background: var(--surface-raised);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--surface-border);
+            overflow: hidden;
+            transition: border-color 0.15s;
+        }
+        .type-card:hover { border-color: var(--accent); }
+        .type-img {
+            aspect-ratio: 4/3;
+            background: var(--surface-input);
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+        }
+        .type-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .type-img-ph { font-size: 0.8rem; color: var(--surface-border); }
+        .type-body { padding: 11px 12px; }
+        .type-name  { font-size: 0.85rem; font-weight: 600; margin-bottom: 3px; }
+        .type-price { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
+
+        /* ── STEPS ─────────────────────────────────────── */
+        .steps-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 1px; background: var(--surface-border);
+            border-radius: var(--radius-md); overflow: hidden;
+        }
+        .step { background: var(--surface-raised); padding: 26px 22px; }
+        .step-num   { font-size: 0.825rem; font-weight: 700; color: var(--accent); margin-bottom: 10px; letter-spacing: .04em; }
+        .step-title { font-size: 1rem; font-weight: 700; margin-bottom: 7px; }
+        .step-desc  { font-size: 0.825rem; color: var(--ink-muted); line-height: 1.55; }
+
+        /* ── PORTFOLIO ─────────────────────────────────── */
+        .portfolio-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+        }
+        .portfolio-item {
+            aspect-ratio: 4/3;
+            background: var(--surface-raised);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--surface-border);
+            overflow: hidden;
+        }
+        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        /* ── SECTION ALT ───────────────────────────────── */
+        .section-alt { background: var(--surface-alt); }
+
+        /* ── SECTION LIGHT (gray) ──────────────────────── */
+        .section-light {
+            background: #E8E8E8;
+            color: #111111;
+        }
+        .section-light .sec-head h2 { color: #111111; }
+        .section-light .sec-head p  { color: #555555; }
+        .section-light .type-card {
+            background: #FFFFFF;
+            border-color: #D0D0D0;
+        }
+        .section-light .type-card:hover { border-color: var(--accent); }
+        .section-light .type-name  { color: #111111; }
+        .section-light .type-price { color: #9A6118; }
+        .section-light .type-img-ph { color: #BBBBBB; }
+
+        /* ── SECTION YELLOW ─────────────────────────────── */
+        .section-yellow {
+            background: var(--accent);
+            color: #1A1A1A;
+        }
+        .section-yellow .sec-head h2 { color: #111111; }
+        .section-yellow .sec-head p  { color: rgba(26,26,26,0.65); }
+        /* Steps on yellow — dark cards pop out */
+        .section-yellow .steps-grid { background: rgba(26,26,26,0.18); }
+        .section-yellow .step { background: #0D0D0D; }
+
+        /* ── TIMELINE (Вариант 3) ──────────────────────── */
+        .tl { position: relative; }
+        .tl-rail {
+            position: absolute;
+            top: 28px;
+            left: 12.5%; right: 12.5%;
+            height: 2px;
+            background: rgba(13,13,13,0.18);
+            border-radius: 1px;
+            z-index: 0;
+        }
+        .tl-fill {
+            height: 100%; width: 0;
+            background: #0D0D0D;
+            border-radius: 1px;
+        }
+        .tl-items {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 16px; position: relative; z-index: 1;
+        }
+        .tl-item { display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .tl-dot {
+            width: 56px; height: 56px; border-radius: 50%;
+            background: #0D0D0D;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; font-weight: 800; color: var(--accent);
+            margin-bottom: 20px; flex-shrink: 0;
+            opacity: 0; transform: scale(0.5);
+            transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .tl-name {
+            font-size: 1rem; font-weight: 700; color: #0D0D0D;
+            margin-bottom: 8px;
+            opacity: 0; transform: translateY(12px);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .tl-desc {
+            font-size: 0.82rem; color: rgba(13,13,13,0.7); line-height: 1.55;
+            opacity: 0; transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        /* Scroll-driven triggers */
+        .tl-item.step-in .tl-dot  { opacity:1; transform:scale(1); }
+        .tl-item.step-in .tl-name { opacity:1; transform:none; transition-delay:0.07s; }
+        .tl-item.step-in .tl-desc { opacity:1; transform:none; transition-delay:0.13s; }
+        @media (prefers-reduced-motion: reduce) {
+            .tl-fill { width: 100%; }
+            .tl-dot, .tl-name, .tl-desc { opacity:1; transform:none; transition:none; }
+        }
+        /* Reviews on yellow — dark cards */
+        .section-yellow .review-card { background: #0D0D0D; border-color: rgba(255,255,255,0.07); }
+        .section-yellow .review-source { border-color: rgba(255,255,255,0.1); }
+
+        /* ── SECTION COMPARE ─────────────────────────────── */
+        .section-compare { background: #E8E8E8; }
+        .section-compare .sec-head h2 { color: #111111; }
+        .section-compare .sec-head p  { color: #555555; }
+        /* Both compare cards — white base, black header, yellow divider */
+        .compare-card.card-ours,
+        .compare-card.card-theirs {
+            background: #FFFFFF;
+            border-color: #D0D0D0;
+        }
+        .compare-card.card-ours .compare-head.ours,
+        .compare-card.card-theirs .compare-head.theirs {
+            background: #111111;
+            font-size: 0.95rem; font-weight: 700;
+        }
+        .compare-card.card-ours .compare-head.ours { color: #FFFFFF; }
+        .compare-card.card-theirs .compare-head.theirs { color: #FFFFFF; }
+        /* Single yellow divider for both cards */
+        .compare-divider-dark  { height: 3px; background: var(--accent); }
+        .compare-divider-accent { height: 3px; background: var(--accent); }
+        .compare-card.card-ours .compare-row {
+            background: #F8F8F8;
+            border-color: #E8E8E8;
+            color: #1A1A1A;
+        }
+        .compare-card.card-ours .cmp-ok { color: #1A9426; }
+        .compare-card.card-theirs .compare-row {
+            background: #F8F8F8;
+            border-color: #E8E8E8;
+            color: #555555;
+        }
+        .compare-card.card-theirs .cmp-no { color: #CC3333; }
+
+        /* ── SECTION CTA GRAY ─────────────────────────────── */
+        .section-cta-gray { background: #E8E8E8; }
+        .section-cta-gray .cta-box {
+            background: #111111;
+            border-color: #2A2A2A;
+        }
+
+        /* ── BUTTON SHINE ──────────────────────────────────── */
+        .calc-cta::after,
+        .cta-form-btn::after,
+        .header-cta::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -80%;
+            width: 55%; height: 100%;
+            background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+            transform: skewX(-18deg);
+            pointer-events: none;
+            animation: btn-shine 3.5s ease-in-out 1.8s infinite;
+        }
+        @keyframes btn-shine {
+            0%   { left: -80%; }
+            28%  { left: 130%; }
+            100% { left: 130%; }
+        }
+
+        /* ── SCROLL ANIMATIONS ────────────────────────────── */
+        .anim-heading {
+            opacity: 0;
+            transform: translateY(38px);
+            transition: opacity 0.75s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .anim-heading.in-view { opacity: 1; transform: none; }
+        .anim-step {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.55s cubic-bezier(0.16,1,0.3,1), transform 0.55s cubic-bezier(0.16,1,0.3,1);
+        }
+        .anim-step.in-view { opacity: 1; transform: translateY(0); }
+        .anim-photo {
+            opacity: 0;
+            transform: scale(0.93);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .anim-photo.in-view { opacity: 1; transform: scale(1); }
+        @media (prefers-reduced-motion: reduce) {
+            .anim-step, .anim-photo, .anim-heading { transition: none; opacity: 1; transform: none; }
+            .calc-cta::after, .cta-form-btn::after, .header-cta::after { animation: none; }
+        }
+
+        /* ── COMPARE ───────────────────────────────────── */
+        .compare-section { background: var(--surface-page); }
+        .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .compare-card {
+            border-radius: var(--radius-md);
+            border: 1px solid var(--surface-border);
+            overflow: hidden;
+        }
+        .compare-head { padding: 14px 18px; font-weight: 700; font-size: 0.95rem; }
+        .compare-head.ours   { background: rgba(245,166,35,.12); color: var(--accent); }
+        .compare-head.theirs { background: var(--surface-input); color: var(--ink-muted); }
+        .compare-row {
+            display: flex; align-items: flex-start; gap: 11px;
+            padding: 11px 18px; border-top: 1px solid var(--surface-border);
+            background: var(--surface-raised); font-size: 0.825rem; color: var(--ink-soft);
+        }
+        .cmp-ok { color: #5CB85C; flex-shrink: 0; margin-top: 1px; font-size: 1.1rem; font-weight: 800; }
+        .cmp-no { color: var(--ink-muted); flex-shrink: 0; margin-top: 1px; font-size: 1.1rem; font-weight: 800; }
+
+        /* ── REVIEWS ───────────────────────────────────── */
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .review-card {
+            background: var(--surface-raised);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--surface-border);
+            padding: 18px 20px;
+            display: flex; flex-direction: column;
+        }
+        .review-stars  { color: var(--accent); font-size: 0.9rem; letter-spacing: 3px; margin-bottom: 10px; }
+        .review-text   { font-size: 0.825rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 12px; flex: 1; }
+        .review-author { font-size: 0.9rem; font-weight: 700; }
+        .review-date   { font-size: 0.825rem; color: var(--ink-muted); }
+        .review-source {
+            margin-top: 12px; padding-top: 12px;
+            border-top: 1px solid var(--surface-border);
+            font-size: 0.825rem; color: var(--ink-muted);
+            display: flex; align-items: center; gap: 6px;
+        }
+        .src-badge {
+            width: 16px; height: 16px; border-radius: 50%;
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 9px; font-weight: 800; flex-shrink: 0; color: #fff;
+        }
+        .src-yandex { background: #FC3F1D; }
+        .src-2gis   { background: #30B33E; }
+
+        /* ── CTA FORM ──────────────────────────────────── */
+        .cta-box {
+            background: var(--surface-raised);
+            border-radius: var(--radius-lg);
+            padding: 56px 60px; text-align: center;
+            border: 1px solid var(--surface-border);
+        }
+        .cta-box h2 { margin-bottom: 10px; }
+        .cta-box p  { color: var(--ink-muted); max-width: 420px; margin: 0 auto 28px; font-size: 0.95rem; }
+        .cta-form   { display: flex; gap: 10px; max-width: 540px; margin: 0 auto 24px; }
+        .cta-input {
+            flex: 1; padding: 13px 15px;
+            background: var(--surface-input);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius-md);
+            color: var(--ink); font-family: inherit; font-size: 0.95rem;
+        }
+        .cta-input::placeholder { color: var(--ink-muted); }
+        .cta-input:focus { outline: none; border-color: var(--accent); }
+        .cta-form-btn {
+            position: relative; overflow: hidden; flex-shrink: 0;
+            padding: 13px 22px;
+            background: var(--accent); color: #1A1A1A;
+            font-family: inherit; font-weight: 800;
+            font-size: 0.95rem; border: none;
+            border-radius: var(--radius-md); cursor: pointer;
+            white-space: nowrap; transition: background 0.12s;
+        }
+        .cta-form-btn:hover { background: var(--accent-dim); }
+        .cta-fine { font-size: 0.825rem; color: var(--ink-muted); white-space: nowrap; text-align: center; }
+
+        /* ── FOOTER ────────────────────────────────────── */
+        .footer-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 28px 0; border-top: 1px solid var(--surface-border);
+            font-size: 0.9rem; color: var(--ink-muted);
+        }
+
+        /* ── RESPONSIVE ────────────────────────────────── */
+        @media (max-width: 960px) {
+            .hero { flex-direction: column; min-height: auto; }
+            .hero-left { width: 100%; padding: 48px 24px; }
+            .hero-right {
+                position: static; width: 100%; height: auto;
+                padding: 36px 24px; max-height: none; animation: none;
+            }
+            .hero-photo-contact { display: none; }
+            .hero-phone-mobile { display: block; margin-top: 20px; }
+            .hero-phone-note-mobile { display: block; }
+            .header-nav { display: none; }
+            .types-grid { grid-template-columns: repeat(3, 1fr); }
+            .steps-grid { grid-template-columns: 1fr 1fr; }
+            .tl-rail { display: none; }
+            .tl-items { grid-template-columns: 1fr 1fr; }
+            .tl-item { align-items: flex-start; text-align: left; }
+            .reviews-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 640px) {
+            .section { padding: 56px 0; }
+            .hero-left { padding: 40px 20px; }
+            .hero-right { padding: 32px 20px; }
+            .types-grid { grid-template-columns: 1fr 1fr; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .tl-items { grid-template-columns: 1fr; }
+            .compare-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr 1fr; }
+            .cta-form { flex-direction: column; }
+            .cta-box { padding: 40px 20px; }
+            .header-phone { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══════════════════════════════════════════════ -->
+<header class="header">
+    <div class="container">
+        <div class="header-inner">
+            <a href="#" class="logo">Потолок<em>НН</em></a>
+            <nav class="header-nav">
+                <a href="#types" class="nav-link">Виды потолков</a>
+                <a href="#steps" class="nav-link">Как работаем</a>
+                <a href="#portfolio" class="nav-link">Работы</a>
+                <a href="#compare" class="nav-link">Цены</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+            </nav>
+            <a href="#calc" class="header-cta">Рассчитать цену</a>
+        </div>
+    </div>
+</header>
+
+<!-- ══ HERO ZONE ═════════════════════════════════════════════ -->
+<div class="hero-zone">
+
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<section class="hero">
+    <div class="hero-bg"></div>
+
+    <!-- Left dark panel — slides in from left -->
+    <div class="hero-left">
+        <p class="hero-eyebrow">Натяжные потолки · {{город}}</p>
+        <h1 class="hero-title">Цена вашего потолка<br>за 30 секунд</h1>
+        <p class="hero-sub">Рассчитайте стоимость прямо сейчас — точная смета на замере за 2 минуты. Приедем в любой день, бесплатно.</p>
+        <p class="hero-price">от 500 р/м² <small>с установкой</small></p>
+        <a href="tel:+79000000000" class="hero-phone hero-phone-mobile">+7 (900) 000-00-00</a>
+        <p class="hero-phone-note hero-phone-note-mobile">с 9:00 до 20:00, без выходных</p>
+    </div>
+
+</section>
+
+<!-- Phone overlay — on photo, top-right column, above calculator (z:2, above hero bg) -->
+<div class="hero-photo-contact">
+    <a href="tel:+79000000000" class="hero-overlay-phone">+7 (900) 000-00-00</a>
+    <p class="hero-overlay-note">с 9:00 до 20:00, без выходных</p>
+</div>
+
+<!-- ══ TICKER ═══════════════════════════════════════════════ -->
+<div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<!-- Calculator — floats above both hero photo and ticker (z-index: 3) -->
+<div class="hero-right" id="calc">
+    <div class="calc-card">
+                <p class="calc-title">Рассчитайте стоимость</p>
+                <p class="calc-hint">Предварительный расчёт — точная цена после замера</p>
+
+                <!-- Area -->
+                <div class="calc-row">
+                    <div class="calc-row-label">
+                        Площадь помещения
+                        <strong><span id="d-area">25</span> м²</strong>
+                    </div>
+                    <input type="range" id="r-area" min="5" max="100" value="25" step="1">
+                </div>
+
+                <!-- Material -->
+                <div class="calc-row">
+                    <div class="calc-row-label" style="margin-bottom: 10px;">Тип полотна</div>
+                    <div class="mat-grid">
+                        <button class="mat-btn active" onclick="setMat('matte', 500, this)">Матовый<small>500 р/м²</small></button>
+                        <button class="mat-btn" onclick="setMat('satin', 550, this)">Сатиновый<small>550 р/м²</small></button>
+                        <button class="mat-btn" onclick="setMat('gloss', 550, this)">Глянцевый<small>550 р/м²</small></button>
+                    </div>
+                </div>
+
+                <!-- Counters -->
+                <div class="calc-row">
+                    <div class="calc-row-label" style="margin-bottom: 10px;">Углы и светильники</div>
+                    <div class="counters-row">
+                        <div class="counter-box">
+                            <div class="counter-name">Углы комнаты</div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="chg('corners',-1)">−</button>
+                                <span class="counter-val" id="d-corners">4</span>
+                                <button class="counter-btn" onclick="chg('corners', 1)">+</button>
+                            </div>
+                        </div>
+                        <div class="counter-box">
+                            <div class="counter-name">Светильники</div>
+                            <div class="counter-controls">
+                                <button class="counter-btn" onclick="chg('lights',-1)">−</button>
+                                <span class="counter-val" id="d-lights">4</span>
+                                <button class="counter-btn" onclick="chg('lights', 1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="calc-divider">
+                <p class="calc-total-label">Предварительная стоимость</p>
+                <p class="calc-total-num"><span id="d-total">13 500</span> ₽</p>
+                <p class="calc-total-fine">Точная цена — после бесплатного замера</p>
+                <p class="calc-preview-label">Будет отправлено в WhatsApp:</p>
+                <div class="calc-preview" id="calc-preview"></div>
+                <button class="calc-cta" id="calc-wa-btn">Получить точный расчёт в WhatsApp</button>
+        </div>
+    </div>
+</div><!-- /hero-zone -->
+
+<!-- ══ TYPES ════════════════════════════════════════════════ -->
+<section class="section section-light" id="types">
+    <div class="container">
+        <div class="sec-head">
+            <h2 class="anim-heading">Виды натяжных потолков</h2>
+            <p>Подберём материал под интерьер и бюджет — от простого матового до многоуровневого со световыми линиями</p>
+        </div>
+        <div class="types-grid">
+            <div class="type-card">
+                <div class="type-img"><img src="assets/type-matte.webp" alt="Матовый натяжной потолок" loading="lazy"></div>
+                <div class="type-body"><p class="type-name">Матовый</p><p class="type-price">от 500 р/м²</p></div>
+            </div>
+            <div class="type-card">
+                <div class="type-img"><img src="assets/type-satin.webp" alt="Сатиновый натяжной потолок" loading="lazy"></div>
+                <div class="type-body"><p class="type-name">Сатиновый</p><p class="type-price">от 550 р/м²</p></div>
+            </div>
+            <div class="type-card">
+                <div class="type-img"><img src="assets/type-gloss.webp" alt="Глянцевый натяжной потолок" loading="lazy"></div>
+                <div class="type-body"><p class="type-name">Глянцевый</p><p class="type-price">от 550 р/м²</p></div>
+            </div>
+            <div class="type-card">
+                <div class="type-img"><img src="assets/type-multi.webp" alt="Многоуровневый натяжной потолок" loading="lazy"></div>
+                <div class="type-body"><p class="type-name">Многоуровневый</p><p class="type-price">от 850 р/м²</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ STEPS ════════════════════════════════════════════════ -->
+<section class="section section-yellow" id="steps">
+    <div class="container">
+        <div class="sec-head">
+            <h2 class="anim-heading">Как проходит установка</h2>
+        </div>
+        <div class="steps-track">
+        <div class="tl">
+            <div class="tl-rail"><div class="tl-fill"></div></div>
+            <div class="tl-items">
+                <div class="tl-item">
+                    <div class="tl-dot">01</div>
+                    <div class="tl-body">
+                        <p class="tl-name">Заявка</p>
+                        <p class="tl-desc">Оставьте номер — перезвоним за 15 минут и согласуем удобное время замера.</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot">02</div>
+                    <div class="tl-body">
+                        <p class="tl-name">Замер</p>
+                        <p class="tl-desc">Приедем в назначенное время, замерим помещения и подготовим точную смету.</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot">03</div>
+                    <div class="tl-body">
+                        <p class="tl-name">Договор</p>
+                        <p class="tl-desc">Фиксируем цену, материал и срок. Никаких доплат после начала работ.</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot">04</div>
+                    <div class="tl-body">
+                        <p class="tl-name">Монтаж</p>
+                        <p class="tl-desc">Устанавливаем за 1–2 дня, убираем за собой. Потолок готов к жизни сразу.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div><!-- /steps-track -->
+        </div>
+    </div>
+</section>
+
+<!-- ══ PORTFOLIO ═════════════════════════════════════════════ -->
+<section class="section" id="portfolio">
+    <div class="container">
+        <div class="sec-head">
+            <h2 class="anim-heading">Наши работы</h2>
+            <p>Реальные объекты в {{город}}</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item anim-photo"><img src="assets/portfolio-1.webp" alt="Работа: глянцевый потолок в гостиной" loading="lazy"></div>
+            <div class="portfolio-item anim-photo"><img src="assets/portfolio-2.webp" alt="Работа: матовый потолок в спальне" loading="lazy"></div>
+            <div class="portfolio-item anim-photo"><img src="assets/portfolio-3.webp" alt="Работа: многоуровневый потолок с LED" loading="lazy"></div>
+            <div class="portfolio-item anim-photo"><img src="assets/portfolio-4.webp" alt="Работа: сатиновый потолок на кухне" loading="lazy"></div>
+            <div class="portfolio-item anim-photo"><img src="assets/portfolio-5.webp" alt="Работа: натяжной потолок в коридоре" loading="lazy"></div>
+            <div class="portfolio-item anim-photo"><img src="assets/portfolio-6.webp" alt="Работа: матовый потолок в детской" loading="lazy"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ COMPARE ═══════════════════════════════════════════════ -->
+<section class="section section-compare" id="compare">
+    <div class="container">
+        <div class="sec-head">
+            <h2 class="anim-heading">Как отличить качество</h2>
+            <p>Рынок заполнен дешёвыми полотнами без сертификатов — вот что стоит проверить перед заказом</p>
+        </div>
+        <div class="compare-grid">
+            <div class="compare-card card-ours">
+                <div class="compare-head ours">У нас</div>
+                <div class="compare-divider-dark"></div>
+                <div class="compare-row"><span class="cmp-ok">✓</span><span>Полотна PONGS, производство Германия — сертификат на каждый рулон</span></div>
+                <div class="compare-row"><span class="cmp-ok">✓</span><span>Толщина 0.18 мм, ширина до 5 м — без стыков в стандартной комнате</span></div>
+                <div class="compare-row"><span class="cmp-ok">✓</span><span>Гарантия 10 лет на материал и монтаж — письменно, в договоре</span></div>
+                <div class="compare-row"><span class="cmp-ok">✓</span><span>Цена фиксируется до начала работ — никаких «неучтённых» доплат</span></div>
+                <div class="compare-row"><span class="cmp-ok">✓</span><span>Убираем мусор и строительную пыль после монтажа</span></div>
+            </div>
+            <div class="compare-card card-theirs">
+                <div class="compare-head theirs">У многих</div>
+                <div class="compare-divider-accent"></div>
+                <div class="compare-row"><span class="cmp-no">✗</span><span>Китайский ПВХ без маркировки — страну производства не называют</span></div>
+                <div class="compare-row"><span class="cmp-no">✗</span><span>Полотна через год желтеют или провисают на стыках</span></div>
+                <div class="compare-row"><span class="cmp-no">✗</span><span>Гарантия на словах — договора нет или он на одну страницу</span></div>
+                <div class="compare-row"><span class="cmp-no">✗</span><span>Доплаты после завершения за «неучтённое» в смете</span></div>
+                <div class="compare-row"><span class="cmp-no">✗</span><span>Мусор и стружка остаются — уборка на вас</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ REVIEWS ════════════════════════════════════════════════ -->
+<section class="section section-yellow" id="reviews">
+    <div class="container">
+        <div class="sec-head">
+            <h2 class="anim-heading">Что говорят клиенты</h2>
+            <p>Отзывы с Яндекс.Карт и 2ГИС — можете проверить сами</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Делали потолок в спальне и гостиной. Мастера приехали в 9 утра, к обеду всё было готово. Очень аккуратно — ни пятна, ни пыли. Потолок ровный, без пузырей, шовы не видны.</p>
+                <p class="review-author">Марина К.</p>
+                <p class="review-date">сентябрь 2026</p>
+                <div class="review-source">
+                    <span class="src-badge src-yandex">Я</span>
+                    Яндекс.Карты
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Брали глянцевый в кухню. Цена совпала с расчётом на сайте — приятно, когда не обманывают. В договоре всё прописано чётко. Буду рекомендовать знакомым.</p>
+                <p class="review-author">Алексей П.</p>
+                <p class="review-date">октябрь 2026</p>
+                <div class="review-source">
+                    <span class="src-badge src-yandex">Я</span>
+                    Яндекс.Карты
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Замерщик пришёл в тот же день. Смета понятная — видно из чего складывается цена. Многоуровневый с подсветкой получился отличный, уже несколько соседей спросили контакт.</p>
+                <p class="review-author">Ольга В.</p>
+                <p class="review-date">октябрь 2026</p>
+                <div class="review-source">
+                    <span class="src-badge src-2gis">2</span>
+                    2ГИС
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ CTA ══════════════════════════════════════════════════ -->
+<section class="section section-cta-gray">
+    <div class="container">
+        <div class="cta-box">
+            <h2 class="anim-heading">Запишитесь на бесплатный замер</h2>
+            <p>Приедем в удобное время, замерим и дадим точную цену. Без предоплаты и обязательств.</p>
+            <div class="cta-form">
+                <input type="text" class="cta-input" placeholder="Ваше имя" id="form-name">
+                <input type="tel" class="cta-input" placeholder="Номер телефона" id="form-phone">
+                <button class="cta-form-btn" onclick="submitForm()">Записаться</button>
+            </div>
+            <p class="cta-fine">Без предоплаты · Замер бесплатно · Договор до начала работ</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+    <div class="container">
+        <div class="footer-inner">
+            <span class="logo">Потолок<em style="color:var(--accent);font-style:normal;">НН</em></span>
+            <span>{{город}} · +7 (900) 000-00-00</span>
+            <span>&copy; 2026</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function () {
+    const PHONE = '79000000000';
+    const PRICES = { material: 500, corner: 250, light: 300 };
+    const state  = { area: 25, corners: 4, lights: 4, matName: 'Матовый' };
+
+    function calcTotal() {
+        return Math.round(state.area * PRICES.material + state.corners * PRICES.corner + state.lights * PRICES.light);
+    }
+
+    function updateDisplay() {
+        var total = calcTotal();
+        document.getElementById('d-total').textContent = total.toLocaleString('ru-RU');
+
+        var msgText = 'Хочу получить точный расчёт. ' +
+            'Площадь: ' + state.area + ' м², тип: ' + state.matName +
+            ', углы: ' + state.corners + ', светильники: ' + state.lights + '. ' +
+            'Предварительно: ' + total.toLocaleString('ru-RU') + ' ₽';
+
+        document.getElementById('calc-preview').textContent = msgText;
+
+        var msg = encodeURIComponent(msgText);
+        document.getElementById('calc-wa-btn').onclick = function () {
+            window.open('https://wa.me/' + PHONE + '?text=' + msg, '_blank');
+        };
+    }
+
+    document.getElementById('r-area').addEventListener('input', function (e) {
+        state.area = +e.target.value;
+        document.getElementById('d-area').textContent = state.area;
+        updateDisplay();
+    });
+
+    window.setMat = function (name, price, btn) {
+        PRICES.material = price;
+        var matNames = { matte: 'Матовый', satin: 'Сатиновый', gloss: 'Глянцевый' };
+        state.matName = matNames[name] || name;
+        document.querySelectorAll('.mat-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        updateDisplay();
+    };
+
+    window.chg = function (key, d) {
+        state[key] = Math.max(0, state[key] + d);
+        document.getElementById('d-' + key).textContent = state[key];
+        updateDisplay();
+    };
+
+    /* Ticker */
+    var items = [
+        'Бесплатный замер', 'Гарантия 10 лет', 'Монтаж за 1 день',
+        'Полотна из Германии', 'Договор с фиксированной ценой', '500+ объектов'
+    ];
+    var html = [...items, ...items].map(function (t) {
+        return '<span class="ticker-item">' + t + '<span class="ticker-sep"></span></span>';
+    }).join('');
+    document.getElementById('ticker-track').innerHTML = html;
+
+    /* Form */
+    window.submitForm = function () {
+        var phone = document.getElementById('form-phone').value.trim();
+        var name  = document.getElementById('form-name').value.trim();
+        if (!phone) { document.getElementById('form-phone').focus(); return; }
+        var msg = encodeURIComponent('Запись на замер\nИмя: ' + (name || 'не указано') + '\nТелефон: ' + phone);
+        window.open('https://wa.me/' + PHONE + '?text=' + msg, '_blank');
+    };
+
+    updateDisplay();
+
+    /* Scroll animations */
+    var animObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                animObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.anim-step').forEach(function(el, i) {
+        el.style.transitionDelay = (i * 0.1) + 's';
+        animObserver.observe(el);
+    });
+    document.querySelectorAll('.anim-photo').forEach(function(el, i) {
+        el.style.transitionDelay = (i * 0.09) + 's';
+        animObserver.observe(el);
+    });
+    document.querySelectorAll('.anim-heading').forEach(function(el) {
+        animObserver.observe(el);
+    });
+
+    /* Hero parallax */
+    var heroBg = document.querySelector('.hero-bg');
+    var heroEl = document.querySelector('.hero');
+    function updateParallax() {
+        if (!heroBg || !heroEl) return;
+        var scrollY = window.scrollY;
+        if (scrollY < heroEl.offsetHeight * 1.4) {
+            heroBg.style.transform = 'translateY(' + (scrollY * 0.45) + 'px)';
+        }
+    }
+
+    /* Steps scroll-driven */
+    var stepsTrack = document.querySelector('.steps-track');
+    var tlItems = stepsTrack ? stepsTrack.querySelectorAll('.tl-item') : [];
+    function updateSteps() {
+        if (!stepsTrack) return;
+        var rect = stepsTrack.getBoundingClientRect();
+        var vh = window.innerHeight;
+        var progress = (vh * 0.78 - rect.top) / (vh * 0.55);
+        progress = Math.max(0, Math.min(1, progress));
+        var fill = stepsTrack.querySelector('.tl-fill');
+        if (fill) fill.style.width = (progress * 100) + '%';
+        tlItems.forEach(function(item, i) {
+            if (progress >= (i + 0.65) / (tlItems.length + 0.5)) {
+                item.classList.add('step-in');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', function() {
+        updateParallax();
+        updateSteps();
+    }, { passive: true });
+
+    updateParallax();
+    updateSteps();
+}());
+</script>
+</body>
+</html>
