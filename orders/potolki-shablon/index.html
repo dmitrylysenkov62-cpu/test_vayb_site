@@ -430,10 +430,25 @@
             opacity: 0; transform: translateY(10px);
             transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
+        /* Featured timeline step */
+        .tl-item--featured .tl-dot {
+            background: var(--accent); color: #0D0D0D;
+            box-shadow: 0 0 0 5px rgba(220,157,69,0.22);
+        }
+        .tl-badge {
+            display: inline-flex; align-items: center; gap: 5px;
+            margin-top: 10px; padding: 4px 11px; border-radius: 20px;
+            font-size: 0.71rem; font-weight: 700; letter-spacing: 0.04em;
+            background: var(--accent); color: #0D0D0D;
+            opacity: 0; transform: translateY(8px);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1);
+        }
+        .section-yellow .tl-badge { background: #0D0D0D; color: var(--accent); }
         /* Scroll-driven triggers */
         .tl-item.step-in .tl-dot  { opacity:1; transform:scale(1); }
         .tl-item.step-in .tl-name { opacity:1; transform:none; transition-delay:0.07s; }
         .tl-item.step-in .tl-desc { opacity:1; transform:none; transition-delay:0.13s; }
+        .tl-item.step-in .tl-badge { opacity:1; transform:none; transition-delay:0.21s; }
         @media (prefers-reduced-motion: reduce) {
             .tl-fill { width: 100%; }
             .tl-dot, .tl-name, .tl-desc { opacity:1; transform:none; transition:none; }
@@ -674,7 +689,7 @@
     <div class="hero-left">
         <p class="hero-eyebrow">Натяжные потолки · {{город}}</p>
         <h1 class="hero-title">Цена вашего потолка<br>за 30 секунд</h1>
-        <p class="hero-sub">Рассчитайте стоимость прямо сейчас — точная смета на замере за 2 минуты. Приедем в любой день, бесплатно.</p>
+        <p class="hero-sub">Прикиньте цену прямо сейчас в калькуляторе.<br>Точную смету замерщик оформит у вас дома — за&nbsp;2&nbsp;минуты, сразу в&nbsp;PDF.</p>
         <p class="hero-price">от 500 р/м² <small>с установкой</small></p>
         <a href="tel:+79000000000" class="hero-phone hero-phone-mobile">+7 (900) 000-00-00</a>
         <p class="hero-phone-note hero-phone-note-mobile">с 9:00 до 20:00, без выходных</p>
@@ -797,11 +812,12 @@
                         <p class="tl-desc">Оставьте номер — перезвоним за 15 минут и согласуем удобное время замера.</p>
                     </div>
                 </div>
-                <div class="tl-item">
+                <div class="tl-item tl-item--featured">
                     <div class="tl-dot">02</div>
                     <div class="tl-body">
                         <p class="tl-name">Замер</p>
-                        <p class="tl-desc">Приедем в назначенное время, замерим помещения и подготовим точную смету.</p>
+                        <p class="tl-desc">Замерщик приедет в назначенное время и внесёт данные прямо на месте — точная смета готова при вас.</p>
+                        <span class="tl-badge">PDF — сразу на руки</span>
                     </div>
                 </div>
                 <div class="tl-item">
