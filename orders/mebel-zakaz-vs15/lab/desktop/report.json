@@ -1,0 +1,22 @@
+{
+  "url": "http://localhost:4600/mebel-zakaz-vs15/",
+  "width": 1440,
+  "height": 900,
+  "reduced": false,
+  "acts": [],
+  "horizontalOverflow": null,
+  "cuesNeverPeaked": [],
+  "consoleErrors": [],
+  "failedRequests": [],
+  "shots": [
+    "D:\\vayb_site\\orders\\mebel-zakaz-vs15\\lab\\desktop\\00-top.png",
+    "D:\\vayb_site\\orders\\mebel-zakaz-vs15\\lab\\desktop\\01-screen01.png",
+    "D:\\vayb_site\\orders\\mebel-zakaz-vs15\\lab\\desktop\\02-screen02.png",
+    "D:\\vayb_site\\orders\\mebel-zakaz-vs15\\lab\\desktop\\03-screen03.png",
+    "D:\\vayb_site\\orders\\mebel-zakaz-vs15\\lab\\desktop\\04-screen04.png",
+    "D:\\vayb_site\\orders\\mebel-zakaz-vs15\\lab\\desktop\\05-screen05.png",
+    "D:\\vayb_site\\orders\\mebel-zakaz-vs15\\lab\\desktop\\06-screen06.png",
+    "D:\\vayb_site\\orders\\mebel-zakaz-vs15\\lab\\desktop\\07-screen07.png",
+    "D:\\vayb_site\\orders\\mebel-zakaz-vs15\\lab\\desktop\\08-widget.png"
+  ]
+}
