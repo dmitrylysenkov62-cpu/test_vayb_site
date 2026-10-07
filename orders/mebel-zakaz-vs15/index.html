@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{{название}} · Мебель на заказ – кухни, шкафы-купе, детские</title>
+<title><span class="s-slot">{{название}}</span> · Мебель на заказ – кухни, шкафы-купе, детские</title>
 <meta name="description" content="Кухни, шкафы-купе и детские комнаты. Бесплатный замер, 3D-проект, собственное производство и монтаж.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Мебель на заказ в {{город}} – по вашим размерам">
@@ -28,7 +28,7 @@
 </style>
 <link rel="stylesheet" href="style-prod.css">
 </head>
-<body class="s-prod" id="top" data-wa="{{whatsapp}}" data-tg="" data-max="">
+<body class="s-prod" id="top" data-wa="{{whatsapp}}" data-tg="{{telegram}}" data-max="" data-s-palettes='{"А":{"name":"тёмный лес + кость + янтарь","vars":{"canvas":"#101713","surface":"#18211c","ink":"#efe9dc","ink-soft":"#adb3a6","accent":"#d99a3e","accent-ink":"#171208","accent-deep":"#d99a3e"}},"Б":{"name":"холодное серебро и хром","vars":{"canvas":"#121417","surface":"#1a1d22","ink":"#e9ecef","ink-soft":"#a9b0b8","accent":"#c5ced8","accent-ink":"#12161b","accent-deep":"#c5ced8"}},"В":{"name":"олива + кирпич","vars":{"canvas":"#15170f","surface":"#1d2015","ink":"#efeadf","ink-soft":"#b5b6a4","accent":"#cf6a44","accent-ink":"#1b0f09","accent-deep":"#cf6a44"}}}'>
 <style>
 .s-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px;}
 .s-tab{min-height:42px;padding:8px 14px;border:1px solid var(--hair);border-radius:10px;background:transparent;color:var(--c-ink);font:600 .92rem/1.1 var(--f-text);cursor:pointer;transition:border-color .15s,background .15s;}
@@ -106,9 +106,9 @@
 .s-cmap__frame--ph{background:rgba(255,255,255,0.06);}
 </style>
 <header class="s-bar" data-s-bar>
-  <a class="s-bar__brand" href="#top"><i aria-hidden="true"></i>{{название}}</a>
+  <a class="s-bar__brand" href="#top"><i aria-hidden="true"></i><span class="s-slot">{{название}}</span></a>
   <div class="s-bar__right">
-    <a class="s-bar__tel" href="#">{{телефон}}</a>
+    <a class="s-bar__tel" href="#"><span class="s-slot">{{телефон}}</span></a>
     <a class="s-btn s-btn--sm s-btn--ghost s-bar__cb" href="#contacts">Заказать звонок</a>
     <a class="s-btn s-btn--sm" href="#widget">Рассчитать стоимость</a>
   </div>
@@ -116,8 +116,8 @@
 <main>
   <section class="s-hero">
     <div class="s-hero__text">
-      <p class="s-eyebrow">Мебель на заказ · {{город}}</p>
-      <h1>Мебель на заказ в {{город}} – по вашим размерам</h1>
+      <p class="s-eyebrow">Мебель на заказ · <span class="s-slot">{{город}}</span></p>
+      <h1>Мебель на заказ в <span class="s-slot">{{город}}</span> – по вашим размерам</h1>
       <p class="s-lead">Кухни, шкафы-купе и детские комнаты. Бесплатный замер, 3D-проект, собственное производство и монтаж.</p>
       <ul class="s-anchors"><li><span>Эконом</span><strong>от 65 тыс. ₽</strong><em>плёнка, постформинг</em></li><li><span>Стандарт</span><strong>от 120 тыс. ₽</strong><em>МДФ эмаль, кварц</em></li><li><span>Премиум</span><strong>от 180 тыс. ₽</strong><em>массив, кварц</em></li></ul>
       <ul class="s-ticks"><li>Бесплатный замер без предоплаты</li><li>3D-проект: меняем, пока не понравится</li><li>Срок и дата монтажа – в договоре</li></ul>
@@ -153,7 +153,7 @@
       <div class="s-bubble" aria-live="polite"><span class="s-bubble__label">Ваше сообщение</span><p data-s-bubble></p></div>
       <div class="s-send">
         <a class="s-btn s-btn--wide" data-s-msg="whatsapp" href="#">Получить расчёт в WhatsApp</a>
-        
+        <a class="s-btn s-btn--ghost" data-s-msg="telegram" href="#">Telegram</a>
       </div>
       <p class="s-send__note" data-s-copied hidden>Текст скопирован – вставьте его в чат.</p>
       <p class="s-demo">Цены для примера. В вашем сайте будут ваши.</p>
@@ -203,7 +203,7 @@
       <li class="s-steps__item"><span class="s-steps__n">01</span><h3>Бесплатный замер</h3><p>Приезжаем с дальномером и образцами фасадов. 1–2 дня.</p></li>
       <li class="s-steps__item"><span class="s-steps__n">02</span><h3>3D-проект</h3><p>Меняем проект, пока не понравится. 2–3 дня.</p></li>
       <li class="s-steps__item"><span class="s-steps__n">03</span><h3>Договор с датой</h3><p>Срок изготовления и дата монтажа – в договоре. Цена фиксируется.</p></li>
-      <li class="s-steps__item"><span class="s-steps__n">04</span><h3>Производство</h3><p>{{срок_производства}} дней на собственном производстве.</p></li>
+      <li class="s-steps__item"><span class="s-steps__n">04</span><h3>Производство</h3><p><span class="s-slot">{{срок_производства}}</span> дней на собственном производстве.</p></li>
       <li class="s-steps__item"><span class="s-steps__n">05</span><h3>Монтаж и сдача</h3><p>1–2 дня. Вывозим упаковку и мусор.</p></li>
     </ol>
   </section>
@@ -222,23 +222,23 @@
       <li><h3>Цена в договоре не меняется</h3><p>После подписания смета не растёт, даже если материалы подорожали.</p></li>
       <li><h3>Фасады как образец</h3><p>Каждый фасад сверяем с образцом, который вы держали в руках.</p></li>
       <li><h3>Дата монтажа в договоре</h3><p>Не «примерно через месяц», а конкретная дата.</p></li>
-      <li><h3>Гарантия на фурнитуру</h3><p>{{гарантия}} лет. Заскрипело – меняем бесплатно.</p></li>
+      <li><h3>Гарантия на фурнитуру</h3><p><span class="s-slot">{{гарантия}}</span> лет. Заскрипело – меняем бесплатно.</p></li>
     </ul>
   </section>
 
   <section class="s-section s-reveal">
-    <header class="s-section__head s-section__head--reviews"><h2>Отзывы с Яндекс.Карт</h2><p class="s-reviews__rating"><span class="s-reviews__num">{{рейтинг}}</span><span class="s-reviews__stars" style="--r: 5" aria-label="рейтинг {{рейтинг}} из 5"></span><span class="s-reviews__count">{{отзывов}} отзывов</span><a class="s-reviews__all" href="{{ссылка-карты}}" target="_blank" rel="noopener">Читать все отзывы на Яндекс.Картах</a></p></header>
+    <header class="s-section__head s-section__head--reviews"><h2>Отзывы с Яндекс.Карт</h2><p class="s-reviews__rating"><span class="s-reviews__num"><span class="s-slot">{{рейтинг}}</span></span><span class="s-reviews__stars" style="--r: 5" aria-label="рейтинг {{рейтинг}} из 5"></span><span class="s-reviews__count"><span class="s-slot">{{отзывов}}</span> отзывов</span><a class="s-reviews__all" href="{{ссылка-карты}}" target="_blank" rel="noopener">Читать все отзывы на Яндекс.Картах</a></p></header>
     <ul class="s-reviews">
-      <li><blockquote>«{{отзыв 1}}»</blockquote><p class="s-reviews__who">{{имя 1}} · {{дата 1}}</p></li>
-      <li><blockquote>«{{отзыв 2}}»</blockquote><p class="s-reviews__who">{{имя 2}} · {{дата 2}}</p></li>
-      <li><blockquote>«{{отзыв 3}}»</blockquote><p class="s-reviews__who">{{имя 3}} · {{дата 3}}</p></li>
+      <li><blockquote>«<span class="s-slot">{{отзыв 1}}</span>»</blockquote><p class="s-reviews__who"><span class="s-slot">{{имя 1}}</span> · <span class="s-slot">{{дата 1}}</span></p></li>
+      <li><blockquote>«<span class="s-slot">{{отзыв 2}}</span>»</blockquote><p class="s-reviews__who"><span class="s-slot">{{имя 2}}</span> · <span class="s-slot">{{дата 2}}</span></p></li>
+      <li><blockquote>«<span class="s-slot">{{отзыв 3}}</span>»</blockquote><p class="s-reviews__who"><span class="s-slot">{{имя 3}}</span> · <span class="s-slot">{{дата 3}}</span></p></li>
     </ul>
     <p class="s-note">Отзывы с карточки на Яндекс.Картах, без правок.</p>
   </section>
 
   <section class="s-section s-reveal">
     <header class="s-section__head"><h2>Частые вопросы</h2></header>
-    <div class="s-faq"><details><summary>Сколько времени занимает изготовление?</summary><p>{{срок_производства}} рабочих дней. Точные сроки фиксируем в договоре.</p></details><details><summary>Выезд замерщика платный?</summary><p>Нет, замер бесплатный. Без предоплат и обязательств.</p></details><details><summary>Можно изменить проект после договора?</summary><p>До начала производства – да, бесплатно. После запуска – только с корректировкой сметы.</p></details><details><summary>Какая гарантия?</summary><p>На корпус и сборку – {{гарантия}} лет. На фурнитуру – по гарантии производителя (Blum, Hettich – 10 лет).</p></details><details><summary>Вы работаете только в {{город}} или в область?</summary><p>Основной радиус – {{город}} и пригороды. Выезд дальше – уточните при обращении.</p></details></div>
+    <div class="s-faq"><details><summary>Сколько времени занимает изготовление?</summary><p><span class="s-slot">{{срок_производства}}</span> рабочих дней. Точные сроки фиксируем в договоре.</p></details><details><summary>Выезд замерщика платный?</summary><p>Нет, замер бесплатный. Без предоплат и обязательств.</p></details><details><summary>Можно изменить проект после договора?</summary><p>До начала производства – да, бесплатно. После запуска – только с корректировкой сметы.</p></details><details><summary>Какая гарантия?</summary><p>На корпус и сборку – <span class="s-slot">{{гарантия}}</span> лет. На фурнитуру – по гарантии производителя (Blum, Hettich – 10 лет).</p></details><details><summary>Вы работаете только в <span class="s-slot">{{город}}</span> или в область?</summary><p>Основной радиус – <span class="s-slot">{{город}}</span> и пригороды. Выезд дальше – уточните при обращении.</p></details></div>
   </section>
 
   <section class="s-section s-reveal" id="contacts">
@@ -255,8 +255,8 @@
         </form>
         <div class="s-cmap">
           <div class="s-cmap__info">
-            <p><b>{{адрес}}</b>, {{город}}</p>
-            <p>{{часы}}</p>
+            <p><b><span class="s-slot">{{адрес}}</span></b>, <span class="s-slot">{{город}}</span></p>
+            <p><span class="s-slot">{{часы}}</span></p>
           </div>
           <div class="s-cmap__frame"><iframe src="https://yandex.ru/map-widget/v1/?ll=39.8940%2C57.6265&amp;z=16&amp;l=map&amp;pt=39.8940%2C57.6265%2Cpm2rdm" title="Карта: {{адрес}} {{город}}" loading="lazy" allowfullscreen></iframe></div>
         </div>
@@ -264,7 +264,7 @@
     </div>
   </section>
 </main>
-<footer class="s-foot"><p>{{название}} · {{город}}</p><p>Кухни, шкафы-купе и детские – по вашим размерам</p></footer>
+<footer class="s-foot"><p><span class="s-slot">{{название}}</span> · <span class="s-slot">{{город}}</span></p><p>Кухни, шкафы-купе и детские – по вашим размерам</p></footer>
 <nav class="s-dock" aria-label="Быстрая связь"><a class="s-btn" href="#widget">Рассчитать стоимость</a><a class="s-btn s-btn--ghost" href="#">Позвонить</a></nav>
 <dialog class="s-dialog" id="cb-dialog">
   <button class="s-dialog__x" aria-label="Закрыть" onclick="this.closest('dialog').close()">✕</button>
@@ -277,6 +277,33 @@
   </div>
 </dialog>
 <script src="style.js" defer></script>
+<style>
+.s-pal-pick{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;gap:6px;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);border-radius:40px;padding:6px 10px;box-shadow:0 4px 20px rgba(0,0,0,.4);}
+.s-pal-pick__lbl{color:rgba(255,255,255,.45);font:600 .72rem/2 sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:0 4px;}
+.s-pal-pick button{border:none;border-radius:30px;padding:6px 18px;font:700 .82rem/1 sans-serif;cursor:pointer;transition:background .15s,color .15s;background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);}
+.s-pal-pick button.is-active{background:#fff;color:#111;}
+</style>
+<div class="s-pal-pick" id="s-pal-pick">
+  <span class="s-pal-pick__lbl">Палитра</span>
+  <button data-pal="А">А</button>
+  <button data-pal="Б">Б</button>
+  <button data-pal="В">В</button>
+</div>
+<script>
+(function(){
+  var btns=document.querySelectorAll("#s-pal-pick [data-pal]");
+  var cur=new URLSearchParams(location.search).get("p")||"А";
+  function mark(k){btns.forEach(function(b){b.classList.toggle("is-active",b.dataset.pal===k);});}
+  mark(cur);
+  btns.forEach(function(btn){btn.addEventListener("click",function(){
+    var k=btn.dataset.pal;
+    var pals=document.body.dataset.sPalettes?JSON.parse(document.body.dataset.sPalettes):null;
+    if(pals&&pals[k])for(var v in pals[k].vars)document.documentElement.style.setProperty("--c-"+v,pals[k].vars[v]);
+    mark(k);
+    history.replaceState(null,"","?p="+encodeURIComponent(k));
+  });});
+})();
+</script>
 <script>
 document.addEventListener("DOMContentLoaded",function(){
   var cbDialog=document.getElementById("cb-dialog");
