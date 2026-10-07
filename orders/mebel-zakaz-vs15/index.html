@@ -30,12 +30,13 @@
 </head>
 <body class="s-prod" id="top" data-wa="{{whatsapp}}" data-tg="" data-max="">
 <style>
-.s-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px;}
-.s-tab{padding:8px 18px;border:1px solid var(--hair);border-radius:8px;background:transparent;color:var(--c-ink-soft);font:600 .87rem/1 var(--f-text);cursor:pointer;transition:background .15s,color .15s,border-color .15s;}
-.s-tab.is-active{background:var(--c-accent);color:var(--c-accent-ink);border-color:var(--c-accent);}
+.s-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px;}
+.s-tab{min-height:42px;padding:8px 14px;border:1px solid var(--hair);border-radius:10px;background:transparent;color:var(--c-ink);font:600 .92rem/1.1 var(--f-text);cursor:pointer;transition:border-color .15s,background .15s;}
+.s-tab.is-active{border-color:var(--c-accent);background:var(--tint);color:var(--c-ink);}
 .s-tab-panel{display:none;}.s-tab-panel.is-active{display:contents;}
 .s-total-note{font-size:.8rem;color:var(--c-ink-soft);text-align:right;margin-top:-12px;}
 .s-widget__title{font-size:clamp(1.4rem,2.4vw,1.9rem);margin-bottom:4px;}
+.s-hero{align-items:stretch;}
 .s-hero__text{display:flex;flex-direction:column;}
 .s-hero__photo{flex:1;min-height:180px;}
 .s-hero__photo img{width:100%;height:100%;aspect-ratio:unset;object-fit:cover;}
@@ -48,6 +49,7 @@
 .s-dialog__field{display:grid;gap:4px;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c-ink-soft);}
 .s-dialog__field input{min-height:46px;border:1px solid var(--hair);border-radius:10px;padding:0 14px;font:1rem var(--f-text);background:var(--c-canvas);color:var(--c-ink);outline:none;}
 .s-dialog__field input:focus{border-color:var(--c-accent);}
+.s-bar__cb{border-color:color-mix(in srgb,var(--c-ink) 45%,transparent);}
 @media(max-width:480px){.s-bar__cb{display:none;}}
 .s-anchors{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
 .s-anchors li{background:var(--c-surface);border-radius:10px;padding:12px;border:1px solid var(--hair);display:grid;gap:3px;}
