@@ -173,6 +173,27 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-reveal.is-in { opacity: 1; transform: none; }
   .s-hero__text, .s-hero__widget { animation: s-rise .6s cubic-bezier(.2, .7, .2, 1) both; }
   .s-hero__widget { animation-delay: .1s; }
+  /* заголовки секций: clip-path reveal снизу вверх */
+  .s-section__head h2 {
+    clip-path: inset(0 0 105% 0);
+    transform: translateY(10px);
+    transition: clip-path .55s cubic-bezier(.2, .7, .2, 1) .15s,
+                transform .55s cubic-bezier(.2, .7, .2, 1) .15s;
+  }
+  .s-reveal.is-in .s-section__head h2 {
+    clip-path: inset(0 0 0% 0);
+    transform: none;
+  }
+  /* подзаголовок секции — появляется следом */
+  .s-section__head p {
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity .4s ease .38s, transform .4s ease .38s;
+  }
+  .s-reveal.is-in .s-section__head p {
+    opacity: 1;
+    transform: none;
+  }
 }
 @keyframes s-rise { from { opacity: 0; transform: translateY(12px); } }
 
