@@ -106,6 +106,8 @@
 .s-cmap__frame--ph{background:rgba(255,255,255,0.06);}
 .s-hero__photo{border-radius:var(--r);border:1px solid var(--hair);overflow:hidden;}
 .s-hero__photo img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+/* parallax: hero background */
+.s-hero__bg img{position:absolute;top:-30%;left:0;height:160%;will-change:transform;}
 /* shimmer on all accent (non-ghost) buttons */
 .s-btn:not(.s-btn--ghost){position:relative;overflow:hidden;}
 .s-btn:not(.s-btn--ghost)::after{content:'';position:absolute;top:-10%;left:0;width:44px;height:120%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.52),transparent);transform:skewX(-12deg) translateX(-300%);animation:s-btn-shine 2.2s ease-in-out infinite;}
@@ -348,6 +350,14 @@ document.addEventListener("DOMContentLoaded",function(){
     else if(tg)window.open("https://t.me/"+tg,"_blank");
     else alert("Укажите WhatsApp или Telegram в styles.json");
   });
+  var heroBgImg=document.querySelector(".s-hero__bg img");
+  if(heroBgImg&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
+    function updateBgParallax(){
+      heroBgImg.style.transform="translate3d(0,"+(window.scrollY*0.3).toFixed(1)+"px,0)";
+    }
+    window.addEventListener("scroll",updateBgParallax,{passive:true});
+    updateBgParallax();
+  }
   var form=document.querySelector(".s-widget--tabs");
   if(!form)return;
   var panels=form.querySelectorAll("[data-panel]");
