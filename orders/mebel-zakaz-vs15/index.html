@@ -106,7 +106,7 @@
 .s-cmap__frame--ph{background:rgba(255,255,255,0.06);}
 /* parallax: hero photo */
 .s-hero__photo{position:relative;overflow:hidden;border-radius:var(--r);border:1px solid var(--hair);}
-.s-hero__photo img{position:absolute;left:0;top:-31%;height:162%;border:0;border-radius:0;will-change:transform;}
+.s-hero__photo img{position:absolute;left:0;top:-51%;height:202%;border:0;border-radius:0;will-change:transform;}
 /* shimmer on all accent (non-ghost) buttons */
 .s-btn:not(.s-btn--ghost){position:relative;overflow:hidden;}
 .s-btn:not(.s-btn--ghost)::after{content:'';position:absolute;top:-10%;left:0;width:44px;height:120%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.52),transparent);transform:skewX(-12deg) translateX(-300%);animation:s-btn-shine 2.2s ease-in-out infinite;}
@@ -361,8 +361,8 @@ document.addEventListener("DOMContentLoaded",function(){
       var start=Math.max(0,docTop-window.innerHeight);
       var end=docTop+rect.height;
       var progress=Math.max(0,Math.min(1,(window.scrollY-start)/(end-start)));
-      /* запас картинки – по 30% высоты рамки сверху и снизу */
-      heroPhotoImg.style.transform="translate3d(0,"+((progress-0.5)*0.6*rect.height).toFixed(1)+"px,0)";
+      /* запас картинки – по 50% высоты рамки сверху и снизу */
+      heroPhotoImg.style.transform="translate3d(0,"+((progress-0.5)*rect.height).toFixed(1)+"px,0)";
     }
     window.addEventListener("scroll",updateParallax,{passive:true});
     window.addEventListener("resize",updateParallax);
