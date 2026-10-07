@@ -105,8 +105,8 @@
 .s-cmap__frame iframe{width:100%;height:100%;border:0;display:block;}
 .s-cmap__frame--ph{background:rgba(255,255,255,0.06);}
 /* parallax: hero photo */
-.s-hero__photo{position:relative;overflow:hidden;}
-.s-hero__photo img{transform:scale(1.2);transform-origin:center center;}
+.s-hero__photo{position:relative;overflow:hidden;border-radius:var(--r);border:1px solid var(--hair);}
+.s-hero__photo img{position:absolute;left:0;top:-31%;height:162%;border:0;border-radius:0;will-change:transform;}
 /* shimmer on all accent (non-ghost) buttons */
 .s-btn:not(.s-btn--ghost){position:relative;overflow:hidden;}
 .s-btn:not(.s-btn--ghost)::after{content:'';position:absolute;top:-10%;left:0;width:44px;height:120%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.52),transparent);transform:skewX(-12deg) translateX(-300%);animation:s-btn-shine 2.2s ease-in-out infinite;}
@@ -128,7 +128,7 @@
       <p class="s-lead">Кухни, шкафы-купе и детские комнаты. Бесплатный замер, 3D-проект, собственное производство и монтаж.</p>
       <ul class="s-anchors"><li><span>Эконом</span><strong>от 65 тыс. ₽</strong><em>плёнка, постформинг</em></li><li><span>Стандарт</span><strong>от 120 тыс. ₽</strong><em>МДФ эмаль, кварц</em></li><li><span>Премиум</span><strong>от 180 тыс. ₽</strong><em>массив, кварц</em></li></ul>
       <ul class="s-ticks"><li>Бесплатный замер без предоплаты</li><li>3D-проект: меняем, пока не понравится</li><li>Срок и дата монтажа – в договоре</li></ul>
-      <figure class="s-hero__photo"><img class="" src="assets/kitchen-oak.webp" alt="Кухня с фасадами из шпона дуба" loading="lazy" decoding="async"></figure>
+      <figure class="s-hero__photo"><img class="" src="assets/kitchen-oak.webp" alt="Кухня с фасадами из шпона дуба" decoding="async"></figure>
     </div>
     <div class="s-hero__widget" id="widget"><form class="s-widget s-widget--tabs" data-s-calc data-base="50000" data-min="0" data-min-note="минимальный заказ" data-per="{&quot;facade&quot;:&quot;length&quot;}" data-message="Здравствуйте! Рассчитайте, пожалуйста, кухню: {выбор}. Ориентир {итого}. Когда можно на замер?" onsubmit="return false">
       <h2 class="s-widget__title">Рассчитать стоимость</h2>
@@ -350,15 +350,22 @@ document.addEventListener("DOMContentLoaded",function(){
     else alert("Укажите WhatsApp или Telegram в styles.json");
   });
   var heroPhotoImg=document.querySelector(".s-hero__photo img");
-  if(heroPhotoImg){
+  if(heroPhotoImg&&!matchMedia("(prefers-reduced-motion: reduce)").matches){
     function updateParallax(){
       var photo=document.querySelector(".s-hero__photo");
       if(!photo)return;
       var rect=photo.getBoundingClientRect();
-      var progress=Math.max(0,Math.min(1,1-(rect.top+rect.height)/(window.innerHeight+rect.height)));
-      heroPhotoImg.style.transform="scale(1.2) translateY("+((progress-0.5)*20)+"%)";
+      if(!rect.height)return;
+      /* отрезок прокрутки, на котором фото реально видно: от появления до ухода за верх экрана */
+      var docTop=rect.top+window.scrollY;
+      var start=Math.max(0,docTop-window.innerHeight);
+      var end=docTop+rect.height;
+      var progress=Math.max(0,Math.min(1,(window.scrollY-start)/(end-start)));
+      /* запас картинки – по 30% высоты рамки сверху и снизу */
+      heroPhotoImg.style.transform="translate3d(0,"+((progress-0.5)*0.6*rect.height).toFixed(1)+"px,0)";
     }
     window.addEventListener("scroll",updateParallax,{passive:true});
+    window.addEventListener("resize",updateParallax);
     updateParallax();
   }
   var form=document.querySelector(".s-widget--tabs");
