@@ -10,7 +10,7 @@
 <meta property="og:description" content="Кухни, шкафы-купе и детские комнаты. Бесплатный замер, 3D-проект, собственное производство и монтаж.">
 <meta property="og:image" content="assets/kitchen-oak.webp">
 <link rel="preload" as="image" href="assets/kitchen-oak.webp" fetchpriority="high">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%276%27 y=%276%27 width=%2720%27 height=%2720%27 rx=%275%27 fill=%27%23cf6a44%27/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%276%27 y=%276%27 width=%2720%27 height=%2720%27 rx=%275%27 fill=%27%23d99a3e%27/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/piazzolla-cyr.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face { font-family: "Piazzolla"; font-style: normal; font-weight: 500 600; font-display: swap;
     src: url(assets/fonts/piazzolla-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
@@ -24,7 +24,7 @@
     src: url(assets/fonts/manrope-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
 @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 600; font-display: swap;
     src: url(assets/fonts/manrope-lat.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212; }
-:root { --c-canvas: #15170f; --c-surface: #1d2015; --c-ink: #efeadf; --c-ink-soft: #b5b6a4; --c-accent: #cf6a44; --c-accent-ink: #1b0f09; --c-accent-deep: #cf6a44; --f-display: "Piazzolla", "Georgia", "Times New Roman", serif; --f-text: "Manrope", "Segoe UI", system-ui, sans-serif; --h1k: 1; }
+:root { --c-canvas: #101713; --c-surface: #18211c; --c-ink: #efe9dc; --c-ink-soft: #adb3a6; --c-accent: #d99a3e; --c-accent-ink: #171208; --c-accent-deep: #d99a3e; --f-display: "Piazzolla", "Georgia", "Times New Roman", serif; --f-text: "Manrope", "Segoe UI", system-ui, sans-serif; --h1k: 1; }
 </style>
 <link rel="stylesheet" href="style-prod.css">
 </head>
@@ -75,7 +75,7 @@
 .s-pcard figcaption span{color:var(--c-accent);font-weight:700;white-space:nowrap;}
 @media(max-width:640px){.s-pgrid.is-active{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:400px){.s-pgrid.is-active{grid-template-columns:1fr;}}
-.s-final-form{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;}
+.s-final-form{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);align-items:start;}
 .s-cform{display:grid;gap:14px;}
 .s-cform__row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .s-cform__field{display:grid;gap:5px;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c-ink-soft);}
@@ -241,23 +241,25 @@
     <div class="s-faq"><details><summary>Сколько времени занимает изготовление?</summary><p>{{срок_производства}} рабочих дней. Точные сроки фиксируем в договоре.</p></details><details><summary>Выезд замерщика платный?</summary><p>Нет, замер бесплатный. Без предоплат и обязательств.</p></details><details><summary>Можно изменить проект после договора?</summary><p>До начала производства – да, бесплатно. После запуска – только с корректировкой сметы.</p></details><details><summary>Какая гарантия?</summary><p>На корпус и сборку – {{гарантия}} лет. На фурнитуру – по гарантии производителя (Blum, Hettich – 10 лет).</p></details><details><summary>Вы работаете только в {{город}} или в область?</summary><p>Основной радиус – {{город}} и пригороды. Выезд дальше – уточните при обращении.</p></details></div>
   </section>
 
-  <section class="s-section s-final s-reveal" id="contacts">
-    <header class="s-section__head"><h2>Оставьте заявку на обратный звонок</h2><p class="s-final__note">Менеджер свяжется в течение часа, уточнит задачу, поможет решить вашу задачу</p></header>
-    <div class="s-final-form">
-      <form class="s-cform" id="cf-form" onsubmit="return false">
-        <div class="s-cform__row">
-          <label class="s-cform__field"><span>Ваше имя</span><input type="text" id="cf-name" placeholder="Иван" autocomplete="name"></label>
-          <label class="s-cform__field"><span>Телефон</span><input type="tel" id="cf-phone" placeholder="+7 (999) 000-00-00" autocomplete="tel"></label>
+  <section class="s-section s-reveal" id="contacts">
+    <div class="s-final">
+      <header class="s-section__head"><h2>Оставьте заявку на обратный звонок</h2><p class="s-final__note">Менеджер свяжется в течение часа, уточнит детали, поможет решить вашу задачу</p></header>
+      <div class="s-final-form">
+        <form class="s-cform" id="cf-form" onsubmit="return false">
+          <div class="s-cform__row">
+            <label class="s-cform__field"><span>Ваше имя</span><input type="text" id="cf-name" placeholder="Иван" autocomplete="name"></label>
+            <label class="s-cform__field"><span>Телефон</span><input type="tel" id="cf-phone" placeholder="+7 (999) 000-00-00" autocomplete="tel"></label>
+          </div>
+          <label class="s-cform__field"><span>Коротко о задаче <em>– необязательно</em></span><textarea id="cf-note" placeholder="Кухня прямая ~3 м, хочу МДФ эмаль" rows="3"></textarea></label>
+          <a class="s-btn s-btn--wide" id="cf-send" href="#" style="margin-top:6px">Позвоните мне</a>
+        </form>
+        <div class="s-cmap">
+          <div class="s-cmap__info">
+            <p><b>{{адрес}}</b>, {{город}}</p>
+            <p>{{часы}}</p>
+          </div>
+          <div class="s-cmap__frame"><iframe src="https://yandex.ru/map-widget/v1/?ll=39.8940%2C57.6265&amp;z=16&amp;l=map&amp;pt=39.8940%2C57.6265%2Cpm2rdm" title="Карта: {{адрес}} {{город}}" loading="lazy" allowfullscreen></iframe></div>
         </div>
-        <label class="s-cform__field"><span>Коротко о задаче <em>– необязательно</em></span><textarea id="cf-note" placeholder="Кухня прямая ~3 м, хочу МДФ эмаль" rows="3"></textarea></label>
-        <a class="s-btn s-btn--wide" id="cf-send" href="#">Получить расчёт в WhatsApp</a>
-      </form>
-      <div class="s-cmap">
-        <div class="s-cmap__info">
-          <p><b>{{адрес}}</b>, {{город}}</p>
-          <p>{{часы}}</p>
-        </div>
-        <div class="s-cmap__frame"><iframe src="https://yandex.ru/map-widget/v1/?ll=39.8940%2C57.6265&amp;z=16&amp;l=map&amp;pt=39.8940%2C57.6265%2Cpm2rdm" title="Карта: {{адрес}} {{город}}" loading="lazy" allowfullscreen></iframe></div>
       </div>
     </div>
   </section>
