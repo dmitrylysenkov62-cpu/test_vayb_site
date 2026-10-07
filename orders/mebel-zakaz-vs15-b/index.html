@@ -30,11 +30,25 @@
 </head>
 <body class="s-prod" id="top" data-wa="{{whatsapp}}" data-tg="" data-max="">
 <style>
-.s-tabs{display:flex;gap:3px;padding:4px;background:color-mix(in srgb,var(--c-canvas) 70%,transparent);border-radius:12px;border:1px solid var(--hair);}
-.s-tab{flex:1;min-height:40px;padding:0 8px;border:none;border-radius:9px;background:transparent;color:var(--c-ink-soft);font:600 .87rem/1 var(--f-text);cursor:pointer;transition:background .15s,color .15s;}
-.s-tab.is-active{background:var(--c-surface);color:var(--c-ink);box-shadow:0 1px 6px color-mix(in srgb,#000 22%,transparent);}
+.s-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px;}
+.s-tab{padding:8px 18px;border:1px solid var(--hair);border-radius:8px;background:transparent;color:var(--c-ink-soft);font:600 .87rem/1 var(--f-text);cursor:pointer;transition:background .15s,color .15s,border-color .15s;}
+.s-tab.is-active{background:var(--c-accent);color:var(--c-accent-ink);border-color:var(--c-accent);}
 .s-tab-panel{display:none;}.s-tab-panel.is-active{display:contents;}
 .s-total-note{font-size:.8rem;color:var(--c-ink-soft);text-align:right;margin-top:-12px;}
+.s-widget__title{font-size:clamp(1.4rem,2.4vw,1.9rem);margin-bottom:4px;}
+.s-hero__text{display:flex;flex-direction:column;}
+.s-hero__photo{flex:1;min-height:180px;}
+.s-hero__photo img{width:100%;height:100%;aspect-ratio:unset;object-fit:cover;}
+.s-dialog{position:relative;border:none;border-radius:var(--r);padding:32px;max-width:440px;width:calc(100% - 32px);background:var(--c-surface);box-shadow:var(--shadow);color:var(--c-ink);}
+.s-dialog::backdrop{background:rgba(0,0,0,.45);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);}
+.s-dialog h2{font-size:1.5rem;margin-bottom:8px;}
+.s-dialog__sub{color:var(--c-ink-soft);font-size:.95rem;margin-bottom:20px;}
+.s-dialog__x{position:absolute;top:14px;right:16px;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--c-ink-soft);line-height:1;padding:4px 8px;}
+.s-dialog__form{display:grid;gap:12px;}
+.s-dialog__field{display:grid;gap:4px;font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c-ink-soft);}
+.s-dialog__field input{min-height:46px;border:1px solid var(--hair);border-radius:10px;padding:0 14px;font:1rem var(--f-text);background:var(--c-canvas);color:var(--c-ink);outline:none;}
+.s-dialog__field input:focus{border-color:var(--c-accent);}
+@media(max-width:480px){.s-bar__cb{display:none;}}
 .s-anchors{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
 .s-anchors li{background:var(--c-surface);border-radius:10px;padding:12px;border:1px solid var(--hair);display:grid;gap:3px;}
 .s-anchors li span{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-ink-soft);}
@@ -59,6 +73,7 @@
   <a class="s-bar__brand" href="#top"><i aria-hidden="true"></i>{{название}}</a>
   <div class="s-bar__right">
     <a class="s-bar__tel" href="#">{{телефон}}</a>
+    <button type="button" class="s-btn s-btn--sm s-btn--ghost s-bar__cb" data-open-callback>Заказать звонок</button>
     <a class="s-btn s-btn--sm" href="#widget">Рассчитать стоимость</a>
   </div>
 </header>
@@ -210,9 +225,35 @@
 </main>
 <footer class="s-foot"><p>{{название}} · {{город}}</p><p>Кухни, шкафы-купе и детские – по вашим размерам</p></footer>
 <nav class="s-dock" aria-label="Быстрая связь"><a class="s-btn" href="#widget">Рассчитать стоимость</a><a class="s-btn s-btn--ghost" href="#">Позвонить</a></nav>
+<dialog class="s-dialog" id="cb-dialog">
+  <button class="s-dialog__x" aria-label="Закрыть" onclick="this.closest('dialog').close()">✕</button>
+  <h2>Заказать звонок</h2>
+  <p class="s-dialog__sub">Перезвоним в течение 15&nbsp;минут</p>
+  <div class="s-dialog__form">
+    <label class="s-dialog__field"><span>Ваше имя</span><input type="text" id="cb-name" placeholder="Иван" autocomplete="name"></label>
+    <label class="s-dialog__field"><span>Телефон</span><input type="tel" id="cb-phone" placeholder="+7 (999) 000-00-00" autocomplete="tel"></label>
+    <a class="s-btn s-btn--wide" id="cb-send" href="#">Жду звонка · WhatsApp</a>
+  </div>
+</dialog>
 <script src="style.js" defer></script>
 <script>
 document.addEventListener("DOMContentLoaded",function(){
+  var cbDialog=document.getElementById("cb-dialog");
+  if(cbDialog){
+    document.querySelectorAll("[data-open-callback]").forEach(function(btn){btn.addEventListener("click",function(){cbDialog.showModal();});});
+    cbDialog.addEventListener("click",function(e){if(e.target===cbDialog)cbDialog.close();});
+    var cbSend=document.getElementById("cb-send");
+    if(cbSend)cbSend.addEventListener("click",function(e){
+      e.preventDefault();
+      var name=(document.getElementById("cb-name").value||"").trim();
+      var phone=(document.getElementById("cb-phone").value||"").trim();
+      var wa=(document.body.dataset.wa||"").replace(/[^0-9]/g,"");
+      if(!wa){alert("Укажите WhatsApp в styles.json");return;}
+      var msg="Здравствуйте!"+(name?" Меня зовут "+name+".":"")+" Прошу перезвонить"+(phone?" на номер "+phone:"")+".";
+      window.open("https://wa.me/"+wa+"?text="+encodeURIComponent(msg),"_blank");
+      cbDialog.close();
+    });
+  }
   document.querySelectorAll(".s-ptab").forEach(function(btn){
     btn.addEventListener("click",function(){
       var id=btn.dataset.ptab;
