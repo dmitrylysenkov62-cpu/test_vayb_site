@@ -10,7 +10,7 @@
 <meta property="og:description" content="Кухни, шкафы-купе и детские комнаты. Бесплатный замер, 3D-проект, собственное производство и монтаж.">
 <meta property="og:image" content="assets/kitchen-oak.webp">
 <link rel="preload" as="image" href="assets/kitchen-oak.webp" fetchpriority="high">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%276%27 y=%276%27 width=%2720%27 height=%2720%27 rx=%275%27 fill=%27%23d99a3e%27/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect x=%276%27 y=%276%27 width=%2720%27 height=%2720%27 rx=%275%27 fill=%27%23cf6a44%27/%3E%3C/svg%3E">
 <link rel="preload" href="assets/fonts/piazzolla-cyr.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face { font-family: "Piazzolla"; font-style: normal; font-weight: 500 600; font-display: swap;
     src: url(assets/fonts/piazzolla-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
@@ -24,7 +24,7 @@
     src: url(assets/fonts/manrope-cyr.woff2) format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
 @font-face { font-family: "Manrope"; font-style: normal; font-weight: 400 600; font-display: swap;
     src: url(assets/fonts/manrope-lat.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212; }
-:root { --c-canvas: #101713; --c-surface: #18211c; --c-ink: #efe9dc; --c-ink-soft: #adb3a6; --c-accent: #d99a3e; --c-accent-ink: #171208; --c-accent-deep: #d99a3e; --f-display: "Piazzolla", "Georgia", "Times New Roman", serif; --f-text: "Manrope", "Segoe UI", system-ui, sans-serif; --h1k: 1; }
+:root { --c-canvas: #15170f; --c-surface: #1d2015; --c-ink: #efeadf; --c-ink-soft: #b5b6a4; --c-accent: #cf6a44; --c-accent-ink: #1b0f09; --c-accent-deep: #cf6a44; --f-display: "Piazzolla", "Georgia", "Times New Roman", serif; --f-text: "Manrope", "Segoe UI", system-ui, sans-serif; --h1k: 1; }
 </style>
 <link rel="stylesheet" href="style-prod.css">
 </head>
@@ -90,12 +90,26 @@
 .s-cinfo dd{margin:0;font-weight:600;}
 .s-cinfo a{color:var(--c-ink);text-decoration:none;}
 @media(max-width:680px){.s-final-form{grid-template-columns:1fr;}.s-cform__row{grid-template-columns:1fr;}}
+.s-final{background:#2F3020;border-radius:16px;padding:clamp(28px,5vw,52px);}
+.s-final .s-section__head h2{color:#f5f0e8;}
+.s-final__note{color:rgba(245,240,232,0.65);margin-top:6px;font-size:.95rem;}
+.s-final .s-cform__field span{color:rgba(245,240,232,0.55);}
+.s-final .s-cform__field input,.s-final .s-cform__field textarea{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.15);color:#f5f0e8;}
+.s-final .s-cform__field input::placeholder,.s-final .s-cform__field textarea::placeholder{color:rgba(245,240,232,0.3);}
+.s-final .s-cform__field input:focus,.s-final .s-cform__field textarea:focus{border-color:var(--c-accent);}
+.s-cmap{display:grid;gap:14px;}
+.s-cmap__info{display:grid;gap:4px;}
+.s-cmap__info p{margin:0;color:rgba(245,240,232,0.75);font-size:.95rem;line-height:1.5;}
+.s-cmap__info p b{color:#f5f0e8;font-weight:600;}
+.s-cmap__frame{border-radius:12px;overflow:hidden;aspect-ratio:4/3;}
+.s-cmap__frame iframe{width:100%;height:100%;border:0;display:block;}
+.s-cmap__frame--ph{background:rgba(255,255,255,0.06);}
 </style>
 <header class="s-bar" data-s-bar>
   <a class="s-bar__brand" href="#top"><i aria-hidden="true"></i>{{название}}</a>
   <div class="s-bar__right">
     <a class="s-bar__tel" href="#">{{телефон}}</a>
-    <button type="button" class="s-btn s-btn--sm s-btn--ghost s-bar__cb" data-open-callback>Заказать звонок</button>
+    <a class="s-btn s-btn--sm s-btn--ghost s-bar__cb" href="#contacts">Заказать звонок</a>
     <a class="s-btn s-btn--sm" href="#widget">Рассчитать стоимость</a>
   </div>
 </header>
@@ -228,7 +242,7 @@
   </section>
 
   <section class="s-section s-final s-reveal" id="contacts">
-    <header class="s-section__head"><h2>Бесплатный замер без обязательств</h2></header>
+    <header class="s-section__head"><h2>Оставьте заявку на обратный звонок</h2><p class="s-final__note">Менеджер свяжется в течение часа, уточнит задачу, поможет решить вашу задачу</p></header>
     <div class="s-final-form">
       <form class="s-cform" id="cf-form" onsubmit="return false">
         <div class="s-cform__row">
@@ -238,11 +252,13 @@
         <label class="s-cform__field"><span>Коротко о задаче <em>– необязательно</em></span><textarea id="cf-note" placeholder="Кухня прямая ~3 м, хочу МДФ эмаль" rows="3"></textarea></label>
         <a class="s-btn s-btn--wide" id="cf-send" href="#">Получить расчёт в WhatsApp</a>
       </form>
-      <dl class="s-cinfo">
-        <div><dt>Адрес</dt><dd>{{адрес}}, {{город}}</dd></div>
-        <div><dt>Часы</dt><dd>{{часы}}</dd></div>
-        <div><dt>Телефон</dt><dd><a href="#">{{телефон}}</a></dd></div>
-      </dl>
+      <div class="s-cmap">
+        <div class="s-cmap__info">
+          <p><b>{{адрес}}</b>, {{город}}</p>
+          <p>{{часы}}</p>
+        </div>
+        <div class="s-cmap__frame"><iframe src="https://yandex.ru/map-widget/v1/?ll=39.8940%2C57.6265&amp;z=16&amp;l=map&amp;pt=39.8940%2C57.6265%2Cpm2rdm" title="Карта: {{адрес}} {{город}}" loading="lazy" allowfullscreen></iframe></div>
+      </div>
     </div>
   </section>
 </main>
