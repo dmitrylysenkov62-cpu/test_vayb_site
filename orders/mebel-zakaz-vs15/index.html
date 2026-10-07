@@ -104,6 +104,12 @@
 .s-cmap__frame{border-radius:12px;overflow:hidden;aspect-ratio:4/3;}
 .s-cmap__frame iframe{width:100%;height:100%;border:0;display:block;}
 .s-cmap__frame--ph{background:rgba(255,255,255,0.06);}
+/* parallax: hero bg image */
+.s-hero__bg img{will-change:transform;transform:scale(1.14);transform-origin:center top;}
+/* shimmer on primary CTA button */
+.s-bar .s-btn:not(.s-btn--ghost){position:relative;overflow:hidden;}
+.s-bar .s-btn:not(.s-btn--ghost)::after{content:'';position:absolute;top:-10%;left:0;width:44px;height:120%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.52),transparent);transform:skewX(-12deg) translateX(-300%);animation:s-bar-shine 2.2s ease-in-out infinite;}
+@keyframes s-bar-shine{0%{transform:skewX(-12deg) translateX(-300%);}50%{transform:skewX(-12deg) translateX(700%);}100%{transform:skewX(-12deg) translateX(700%);}}
 </style>
 <header class="s-bar" data-s-bar>
   <a class="s-bar__brand" href="#top"><i aria-hidden="true"></i><span class="s-slot">{{название}}</span></a>
@@ -342,6 +348,18 @@ document.addEventListener("DOMContentLoaded",function(){
     else if(tg)window.open("https://t.me/"+tg,"_blank");
     else alert("Укажите WhatsApp или Telegram в styles.json");
   });
+  var heroBgImg=document.querySelector(".s-hero__bg img");
+  if(heroBgImg&&!window.matchMedia("(prefers-reduced-motion:reduce)").matches){
+    function updateParallax(){
+      var hero=document.querySelector(".s-hero");
+      if(!hero)return;
+      var rect=hero.getBoundingClientRect();
+      var progress=Math.max(0,Math.min(1,-rect.top/(rect.height+window.innerHeight)));
+      heroBgImg.style.transform="scale(1.14) translateY("+(progress*16)+"%)";
+    }
+    window.addEventListener("scroll",updateParallax,{passive:true});
+    updateParallax();
+  }
   var form=document.querySelector(".s-widget--tabs");
   if(!form)return;
   var panels=form.querySelectorAll("[data-panel]");
